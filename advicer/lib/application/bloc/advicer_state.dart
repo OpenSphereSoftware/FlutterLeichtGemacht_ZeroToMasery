@@ -16,4 +16,9 @@ class AdvicerStateLoaded extends AdvicerState {
   AdvicerStateLoaded({required this.advice});
 }
 
-class AdvicerStateError extends AdvicerState {}
+class AdvicerStateError extends AdvicerState {
+  final String message;
+
+  AdvicerStateError({required this.message});
+
+}
