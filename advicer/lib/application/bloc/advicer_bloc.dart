@@ -11,11 +11,8 @@ part 'advicer_event.dart';
 part 'advicer_state.dart';
 
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
-  AdvicerBloc() : super(AdvicerInitial());
-
-  final usecases = AdvicerUsecases();
-
- 
+  AdvicerBloc({required this.usecases}) : super(AdvicerInitial());
+  final AdvicerUsecases usecases;
 
   @override
   Stream<AdvicerState> mapEventToState(
