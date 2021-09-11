@@ -14,4 +14,7 @@ class AdvicerUsecases {
 
     // Buisness logic implementieren z.b. rechnung etc
   }
+
+
+  
 }

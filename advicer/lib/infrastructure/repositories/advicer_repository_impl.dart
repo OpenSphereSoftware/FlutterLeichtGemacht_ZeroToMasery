@@ -17,7 +17,7 @@ class AdvicerRepositoryImpl implements AdvicerRepository {
           await advicerRemoteDatasource.getRandomAdviceFromApi();
       return Right(remoteAdvice);
     } catch (e) {
-      if (e.runtimeType is SeverException) {
+      if (e is  SeverException) {
         return Left(ServerFailure());
       } else {
         return Left(GeneralFailure());
