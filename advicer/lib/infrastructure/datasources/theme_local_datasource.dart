@@ -20,16 +20,12 @@ class ThemeLocalDatasourceImpl implements ThemeLocalDatasource {
 
   @override
   Future<bool> getCachedThemeData() {
-
     final modeBool = sharedPreferences.getBool(CACHED_THEME_MODE);
 
-    if(modeBool != null){
+    if (modeBool != null) {
       return Future.value(modeBool);
-    }else{
+    } else {
       throw CacheException();
     }
-
-    
-    
   }
 }

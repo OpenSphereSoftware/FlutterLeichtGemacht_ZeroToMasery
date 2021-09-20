@@ -1,5 +1,4 @@
-
-import 'package:advicer/application/bloc/advicer_bloc.dart';
+import 'package:advicer/application/advicer/advicer_bloc.dart';
 import 'package:advicer/domain/entities/advice_Enitity.dart';
 import 'package:advicer/domain/failures/failures.dart';
 import 'package:advicer/domain/usecases/advicer_usecases.dart';
@@ -11,32 +10,28 @@ import 'package:mockito/mockito.dart';
 import 'advice_bloc_test.mocks.dart';
 
 @GenerateMocks([AdvicerUsecases])
-void main(){
-
+void main() {
   late AdvicerBloc advicerBloc;
   late MockAdvicerUsecases mockAdvicerUsecases;
 
-
-  setUp((){
+  setUp(() {
     mockAdvicerUsecases = MockAdvicerUsecases();
     advicerBloc = AdvicerBloc(usecases: mockAdvicerUsecases);
   });
 
-  test(" initState should be AdvicerInitial", (){
+  test(" initState should be AdvicerInitial", () {
     // assert
     expect(advicerBloc.state, equals(AdvicerInitial()));
   });
 
-  group("AdviceRequestedEvent", (){
-
+  group("AdviceRequestedEvent", () {
     final t_Advice = AdviceEntity(advice: "test", id: 1);
     final t_Advice_String = "test";
 
-
-    test("should call usecase if event is added", () async{
-
+    test("should call usecase if event is added", () async {
       // arrange
-      when(mockAdvicerUsecases.getAdviceUsecase()).thenAnswer((_) async =>  Right(t_Advice));
+      when(mockAdvicerUsecases.getAdviceUsecase())
+          .thenAnswer((_) async => Right(t_Advice));
 
       //act
       advicerBloc.add(AdviceRequestedEvent());
@@ -47,10 +42,11 @@ void main(){
       verifyNoMoreInteractions(mockAdvicerUsecases);
     });
 
-    test("should emmit loading then the loaded state after event is added", () async{
-
+    test("should emmit loading then the loaded state after event is added",
+        () async {
       // arrange
-      when(mockAdvicerUsecases.getAdviceUsecase()).thenAnswer((_) async =>  Right(t_Advice));
+      when(mockAdvicerUsecases.getAdviceUsecase())
+          .thenAnswer((_) async => Right(t_Advice));
 
       //assert later
       final expected = [
@@ -60,14 +56,15 @@ void main(){
       expectLater(advicerBloc.stream, emitsInOrder(expected));
 
       // act
-       advicerBloc.add(AdviceRequestedEvent());
-      
+      advicerBloc.add(AdviceRequestedEvent());
     });
 
-    test("should emmit loading then the error state after event is added -> usecase fails -> server failure", () async{
-
+    test(
+        "should emmit loading then the error state after event is added -> usecase fails -> server failure",
+        () async {
       // arrange
-      when(mockAdvicerUsecases.getAdviceUsecase()).thenAnswer((_) async =>  Left(ServerFailure()));
+      when(mockAdvicerUsecases.getAdviceUsecase())
+          .thenAnswer((_) async => Left(ServerFailure()));
 
       //assert later
       final expected = [
@@ -77,14 +74,15 @@ void main(){
       expectLater(advicerBloc.stream, emitsInOrder(expected));
 
       // act
-       advicerBloc.add(AdviceRequestedEvent());
-      
+      advicerBloc.add(AdviceRequestedEvent());
     });
 
-     test("should emmit loading then the error state after event is added -> usecase fails -> general failure", () async{
-
+    test(
+        "should emmit loading then the error state after event is added -> usecase fails -> general failure",
+        () async {
       // arrange
-      when(mockAdvicerUsecases.getAdviceUsecase()).thenAnswer((_) async =>  Left(GeneralFailure()));
+      when(mockAdvicerUsecases.getAdviceUsecase())
+          .thenAnswer((_) async => Left(GeneralFailure()));
 
       //assert later
       final expected = [
@@ -94,16 +92,7 @@ void main(){
       expectLater(advicerBloc.stream, emitsInOrder(expected));
 
       // act
-       advicerBloc.add(AdviceRequestedEvent());
-      
+      advicerBloc.add(AdviceRequestedEvent());
     });
-
-
-
   });
-
-
-
-
-
 }

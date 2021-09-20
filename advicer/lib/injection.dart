@@ -1,11 +1,14 @@
 
 
-import 'package:advicer/application/bloc/advicer_bloc.dart';
+import 'package:advicer/application/advicer/advicer_bloc.dart';
+import 'package:advicer/application/theme/theme_service.dart';
 import 'package:advicer/domain/reposetories/advicer_repository.dart';
+import 'package:advicer/domain/reposetories/theme_repositroy.dart';
 import 'package:advicer/domain/usecases/advicer_usecases.dart';
 import 'package:advicer/infrastructure/datasources/advicer_remote_datasource.dart';
 import 'package:advicer/infrastructure/datasources/theme_local_datasource.dart';
 import 'package:advicer/infrastructure/repositories/advicer_repository_impl.dart';
+import 'package:advicer/infrastructure/repositories/theme_repository_impl.dart';
 import 'package:get_it/get_it.dart';
 
 import 'package:http/http.dart' as http;
@@ -16,8 +19,9 @@ final sl = GetIt.I;  // sl == service Locator
 Future<void> init() async {
 
 
-  //! Blocs 
+  //! application layer 
   sl.registerFactory(() => AdvicerBloc(usecases: sl()));
+  sl.registerLazySingleton<ThemeService>(() => ThemeServiceImpl(themeRepository: sl()));
 
   //! Usecases
   sl.registerLazySingleton(() => AdvicerUsecases(advicerRepository: sl()));
@@ -25,6 +29,7 @@ Future<void> init() async {
   //! repos
 
   sl.registerLazySingleton<AdvicerRepository>(() => AdvicerRepositoryImpl(advicerRemoteDatasource: sl()));
+  sl.registerLazySingleton<ThemeRepository>(() => ThemeRespositoryImpl(themeLocalDatasource: sl()));
 
   //! datasources
 

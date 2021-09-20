@@ -13,8 +13,11 @@ class AdvicerRepositoryImpl implements AdvicerRepository {
   @override
   Future<Either<Failure, AdviceEntity>> getAdviceFromApi() async {
     try {
+
       final remoteAdvice =
           await advicerRemoteDatasource.getRandomAdviceFromApi();
+
+          
       return Right(remoteAdvice);
     } catch (e) {
       if (e is  SeverException) {
