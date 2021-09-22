@@ -30,7 +30,7 @@ void main() {
   });
 
   group("setThemeMode", () {
-    final t_mode = false;
+    const t_mode = false;
 
     test(
         "should set the theme to the parameter it gets, store theme information",
@@ -51,7 +51,7 @@ void main() {
   });
 
   group("toggleThemeMode", () {
-    final t_mode = false;
+    const t_mode = false;
 
     test("should toggle current theme mode, store theme information", () async {
       //arragen
@@ -70,7 +70,7 @@ void main() {
   });
 
   group("init", () {
-    final t_mode = false;
+    const t_mode = false;
 
     test(
         "should get a theme mode from local data source and use it and notify listeners",
@@ -78,7 +78,7 @@ void main() {
       //arragen
       themeService.isDarkModeOn = true;
       when(mockThemeRepository.getThemeMode())
-          .thenAnswer((_) async => Right(t_mode));
+          .thenAnswer((_) async => const Right(t_mode));
 
       // act
       await themeService.init();

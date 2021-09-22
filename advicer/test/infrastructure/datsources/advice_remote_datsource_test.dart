@@ -72,7 +72,7 @@ void main() {
      final call =  advicerRemoteDatasource.getRandomAdviceFromApi;
 
       //assert
-      expect(()=> call(), throwsA(TypeMatcher<SeverException>()));
+      expect(()=> call(), throwsA( const TypeMatcher<SeverException>()));
       
     });
   });

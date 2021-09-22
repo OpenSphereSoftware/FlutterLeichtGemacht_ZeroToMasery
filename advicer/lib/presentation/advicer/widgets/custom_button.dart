@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               color: themeData.colorScheme.secondary),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
             child: Text(
               "Get Advice",
               style: themeData.textTheme.headline1,

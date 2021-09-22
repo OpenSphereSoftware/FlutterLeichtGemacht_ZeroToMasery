@@ -1,4 +1,4 @@
-import 'package:advicer/domain/entities/advice_Enitity.dart';
+import 'package:advicer/domain/entities/advice_enitity.dart';
 import 'package:advicer/infrastructure/exceptions/exceptions.dart';
 import 'package:advicer/infrastructure/models/advice_model.dart';
 

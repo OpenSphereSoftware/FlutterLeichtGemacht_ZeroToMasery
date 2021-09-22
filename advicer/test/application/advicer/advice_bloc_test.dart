@@ -1,5 +1,5 @@
 import 'package:advicer/application/advicer/advicer_bloc.dart';
-import 'package:advicer/domain/entities/advice_Enitity.dart';
+import 'package:advicer/domain/entities/advice_enitity.dart';
 import 'package:advicer/domain/failures/failures.dart';
 import 'package:advicer/domain/usecases/advicer_usecases.dart';
 import 'package:dartz/dartz.dart';
@@ -25,13 +25,13 @@ void main() {
   });
 
   group("AdviceRequestedEvent", () {
-    final t_Advice = AdviceEntity(advice: "test", id: 1);
-    final t_Advice_String = "test";
+    final t_advice = AdviceEntity(advice: "test", id: 1);
+    const t_advice_string = "test";
 
     test("should call usecase if event is added", () async {
       // arrange
       when(mockAdvicerUsecases.getAdviceUsecase())
-          .thenAnswer((_) async => Right(t_Advice));
+          .thenAnswer((_) async => Right(t_advice));
 
       //act
       advicerBloc.add(AdviceRequestedEvent());
@@ -46,12 +46,12 @@ void main() {
         () async {
       // arrange
       when(mockAdvicerUsecases.getAdviceUsecase())
-          .thenAnswer((_) async => Right(t_Advice));
+          .thenAnswer((_) async => Right(t_advice));
 
       //assert later
       final expected = [
         AdvicerStateLoading(),
-        AdvicerStateLoaded(advice: t_Advice_String)
+        AdvicerStateLoaded(advice: t_advice_string)
       ];
       expectLater(advicerBloc.stream, emitsInOrder(expected));
 
