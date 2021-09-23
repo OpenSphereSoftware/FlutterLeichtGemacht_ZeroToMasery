@@ -23,7 +23,7 @@ void main(){
 
     group("getCachedThemeData", (){
 
-      final t_themeData = true;
+      const t_themeData = true;
 
       test("should return a bool ( themeData) if there is one in sharedPreferences", ()async{
 
@@ -49,7 +49,7 @@ void main(){
         final call =  themeLocalDatasource.getCachedThemeData;
 
         //assert
-        expect(()=> call(), throwsA(TypeMatcher<CacheException>()));
+        expect(()=> call(), throwsA(const TypeMatcher<CacheException>()));
 
 
       });
@@ -60,7 +60,7 @@ void main(){
 
     group("cacheThemeData", (){
 
-      final t_themeData = true;
+      const t_themeData = true;
 
 
       test("should call shared preferences to cache theme mode", ()async {

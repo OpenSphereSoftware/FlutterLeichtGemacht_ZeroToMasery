@@ -4,7 +4,7 @@
 
 import 'dart:async' as _i4;
 
-import 'package:advicer/domain/entities/advice_Enitity.dart' as _i6;
+import 'package:advicer/domain/entities/advice_enitity.dart' as _i6;
 import 'package:advicer/domain/failures/failures.dart' as _i5;
 import 'package:advicer/domain/reposetories/advicer_repository.dart' as _i3;
 import 'package:dartz/dartz.dart' as _i2;

@@ -17,7 +17,7 @@ class AdviceField extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               color: themeData.colorScheme.onPrimary),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             child: Text('''" $advice "''', style: themeData.textTheme.bodyText1,textAlign: TextAlign.center,),
           ),
         ),

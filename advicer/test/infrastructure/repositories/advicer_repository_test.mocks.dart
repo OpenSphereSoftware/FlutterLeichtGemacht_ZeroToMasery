@@ -4,7 +4,7 @@
 
 import 'dart:async' as _i4;
 
-import 'package:advicer/domain/entities/advice_Enitity.dart' as _i2;
+import 'package:advicer/domain/entities/advice_enitity.dart' as _i2;
 import 'package:advicer/infrastructure/datasources/advicer_remote_datasource.dart'
     as _i3;
 import 'package:mockito/mockito.dart' as _i1;
