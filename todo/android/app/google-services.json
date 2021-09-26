@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "412763203883",
+    "project_id": "flutterkurstodo",
+    "storage_bucket": "flutterkurstodo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412763203883:android:6a7076ab4c607a45423d6e",
+        "android_client_info": {
+          "package_name": "com.example.todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412763203883-r06on0rqepd35qks06fp451gm3mpq8oc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.todo",
+            "certificate_hash": "29f6425355eec5a2e16fbc7b6411b2fce52a24c8"
+          }
+        },
+        {
+          "client_id": "412763203883-9ov1dei3bk3sml14vjisub2jnlhal1dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEBg9vQf2XJ4gVaP5yJvTVj2C7AQVEj_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412763203883-9ov1dei3bk3sml14vjisub2jnlhal1dc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -21,6 +21,7 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
@@ -44,7 +45,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.todo"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -64,5 +65,6 @@ flutter {
 }
 
 dependencies {
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
