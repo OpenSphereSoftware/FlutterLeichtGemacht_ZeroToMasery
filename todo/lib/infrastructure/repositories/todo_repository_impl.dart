@@ -37,20 +37,58 @@ class TodoRepositoryImpl implements TodoRepository {
   }
 
   @override
-  Future<Either<TodoFailure, Unit>> create(Todo todo) {
-    // TODO: implement create
-    throw UnimplementedError();
+  Future<Either<TodoFailure, Unit>> create(Todo todo) async {
+    try {
+      final userDoc = await firestore.userDocument();
+      final todoModel = TodoModel.fromDomain(todo);
+
+      await userDoc.todoCollection.doc(todoModel.id).set(todoModel.toMap());
+
+      return right(unit);
+    } on FirebaseException catch (e) {
+      if (e.code.contains("PERMISSION_DENIED")) {
+        return left(InsufficientPermisssons());
+      } else {
+        return left(UnexpectedFailure());
+      }
+    }
   }
 
   @override
-  Future<Either<TodoFailure, Unit>> delete(Todo todo) {
-    // TODO: implement delete
-    throw UnimplementedError();
+  Future<Either<TodoFailure, Unit>> update(Todo todo) async {
+    try {
+      final userDoc = await firestore.userDocument();
+      final todoModel = TodoModel.fromDomain(todo);
+
+      await userDoc.todoCollection.doc(todoModel.id).update(todoModel.toMap());
+
+      return right(unit);
+    } on FirebaseException catch (e) {
+      if (e.code.contains("PERMISSION_DENIED")) {
+        // NOT_FOUND
+        return left(InsufficientPermisssons());
+      } else {
+        return left(UnexpectedFailure());
+      }
+    }
   }
 
   @override
-  Future<Either<TodoFailure, Unit>> update(Todo todo) {
-    // TODO: implement update
-    throw UnimplementedError();
+  Future<Either<TodoFailure, Unit>> delete(Todo todo) async {
+    try {
+      final userDoc = await firestore.userDocument();
+      final todoModel = TodoModel.fromDomain(todo);
+
+      await userDoc.todoCollection.doc(todoModel.id).delete();
+
+      return right(unit);
+    } on FirebaseException catch (e) {
+      if (e.code.contains("PERMISSION_DENIED")) {
+        // NOT_FOUND
+        return left(InsufficientPermisssons());
+      } else {
+        return left(UnexpectedFailure());
+      }
+    }
   }
 }
