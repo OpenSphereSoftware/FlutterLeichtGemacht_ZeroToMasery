@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/domain/entities/id.dart';
@@ -50,7 +48,7 @@ class TodoModel {
     String? body,
     bool? done,
     int? color,
-    dynamic? serverTimeStamp,
+    dynamic serverTimeStamp,
   }) {
     return TodoModel(
       id: id ?? this.id,

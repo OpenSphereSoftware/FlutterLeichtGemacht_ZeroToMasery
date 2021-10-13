@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo/injection.dart' as di;
 import 'package:todo/presentation/routes/router.gr.dart' as r;
-import 'package:todo/presentation/signup/signup_page.dart';
 import 'package:todo/theme.dart';
 
 import 'application/auth/authbloc/auth_bloc.dart';
@@ -18,6 +17,8 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final _appRouter = r.AppRouter();
+
+  MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

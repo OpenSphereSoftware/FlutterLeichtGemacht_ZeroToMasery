@@ -20,7 +20,7 @@ class HomeBody extends StatelessWidget {
             ),
           );
         } else if (state is ObserverFailure) {
-          return Center(child: Text("Failure"));
+          return const Center(child: Text("Failure"));
         } else if (state is ObserverSuccess) {
           return ListView.builder(
             itemCount: state.todos.length,
