@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo/application/todos/todoForm/todoform_bloc.dart';
+import 'package:todo/presentation/core/custom_button.dart';
 import 'package:todo/presentation/todo_detail/widgets/color_field.dart';
 
 class TodoForm extends StatelessWidget {
@@ -86,7 +87,28 @@ class TodoForm extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                ColorField(color: state.todo.color)
+                ColorField(color: state.todo.color),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomButton(
+                    buttonText: "Safe",
+                    callback: () {
+                      if (formKey.currentState!.validate()) {
+                        BlocProvider.of<TodoformBloc>(context)
+                            .add(SafePressedEvent(body: body, title: title));
+                      } else {
+                        BlocProvider.of<TodoformBloc>(context)
+                            .add(SafePressedEvent(body: null, title: null));
+
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            backgroundColor: Colors.redAccent,
+                            content: Text(
+                              "Invalid Input",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )));
+                      }
+                    })
               ],
             ),
           ),
