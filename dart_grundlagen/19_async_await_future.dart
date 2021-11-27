@@ -2,23 +2,31 @@ import 'dart:io';
 
 void main() async {
   DataFetcher fetcher = DataFetcher();
-
+  parallelTask();
   String data = await fetcher.getData();
-
   print(data);
+}
+
+// um wirklich parallelität zu demonstrieren habe ich hier noch eine Funktion gebaut
+void parallelTask() async {
+  for (int i = 0; i < 100; i++) {
+    await Future.delayed(Duration(seconds: 1));
+    print(i);
+  }
 }
 
 class DataFetcher {
   Future<String> _getDataFromCloud() async {
     // get data from cloud
-    sleep(Duration(seconds: 6));
+    // sleep hällt das programm auf   Future delayed stoppt nur die spezifische Funktion
+    await Future.delayed(Duration(seconds: 4));
     print("get finished");
     return "data from Cloud";
   }
 
   Future<String> _parseDataFromCloud({required String cloudData}) async {
     // parse cloud data
-    sleep(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 2));
     print("data parsing finished");
     return "parsed Data";
   }
