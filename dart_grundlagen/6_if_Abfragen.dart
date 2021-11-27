@@ -3,9 +3,9 @@
 
 void main (){
 
-    int alter = 17;
+    int alter = 16;
 
-    alter = alter + 1;
+    //alter = alter + 1;
 
     print("vor dem if");
 
