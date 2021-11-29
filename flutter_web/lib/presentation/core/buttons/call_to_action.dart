@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterweb/constants.dart';
 
-class GetStartedButton extends StatelessWidget {
-  final bool inDrawer;
-  const GetStartedButton({Key? key, required this.inDrawer}) : super(key: key);
+class CallToAction extends StatelessWidget {
+  final String text;
+
+  const CallToAction({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,25 +12,22 @@ class GetStartedButton extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          print("get started pressed");
+          print("call to action pressed pressed");
         },
-        child: Material(
-          elevation: 6,
-          borderRadius: BorderRadius.circular(20),
+        child: IntrinsicWidth(
           child: Container(
             height: 40,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: inDrawer ? Colors.white : primaryDark,
+                color: Colors.white,
+                border: Border.all(color: primaryDark),
                 borderRadius: BorderRadius.circular(20)),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Text(
-                "Get Started",
-                style: TextStyle(
-                    fontFamily: fontFamily,
-                    fontSize: 15,
-                    color: inDrawer ? primaryDark : textPrimaryDark),
+                text,
+                style: const TextStyle(
+                    fontFamily: fontFamily, fontSize: 15, color: primaryDark),
               ),
             ),
           ),
