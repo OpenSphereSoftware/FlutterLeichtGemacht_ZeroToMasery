@@ -65,7 +65,10 @@ class MultiPlattform extends StatelessWidget {
                     const SizedBox(
                       height: 25,
                     ),
-                    const CallToAction(text: "See the target platforms")
+                    CallToAction(
+                      text: "See the target platforms",
+                      callback: () {},
+                    )
                   ],
                 ),
               )),

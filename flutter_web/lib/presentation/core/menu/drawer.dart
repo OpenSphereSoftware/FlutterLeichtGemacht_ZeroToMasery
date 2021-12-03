@@ -3,6 +3,8 @@ import 'package:flutterweb/constants.dart';
 import 'package:flutterweb/presentation/core/buttons/get_started.dart';
 import 'package:flutterweb/presentation/core/menu/flutter_home_logo.dart';
 import 'package:flutterweb/presentation/core/menu/menu_item.dart';
+import 'package:flutterweb/presentation/dev_page/dev_page.dart';
+import 'package:flutterweb/presentation/eco_page/eco_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -35,6 +37,7 @@ class CustomDrawer extends StatelessWidget {
                   height: 40,
                 ),
                 const MenuItem(
+                  path: "",
                   text: "Docs",
                   inDrawer: true,
                 ),
@@ -42,6 +45,7 @@ class CustomDrawer extends StatelessWidget {
                   height: 20,
                 ),
                 const MenuItem(
+                  path: "",
                   text: "Showcase",
                   inDrawer: true,
                 ),
@@ -49,6 +53,7 @@ class CustomDrawer extends StatelessWidget {
                   height: 20,
                 ),
                 const MenuItem(
+                  path: DevPage.devPagePath,
                   text: "Development",
                   inDrawer: true,
                 ),
@@ -56,6 +61,7 @@ class CustomDrawer extends StatelessWidget {
                   height: 20,
                 ),
                 const MenuItem(
+                  path: EcoPage.ecoPagePath,
                   text: "Ecosystem",
                   inDrawer: true,
                 ),

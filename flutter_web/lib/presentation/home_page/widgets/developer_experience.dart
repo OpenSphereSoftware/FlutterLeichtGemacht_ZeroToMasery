@@ -77,8 +77,9 @@ class DeveloperExperience extends StatelessWidget {
                   const SizedBox(
                     height: 25,
                   ),
-                  const CallToAction(
+                   CallToAction(
                     text: "Flutter for developers",
+                    callback: (){},
                   )
                 ],
               ),

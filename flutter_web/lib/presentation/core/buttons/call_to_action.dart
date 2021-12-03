@@ -3,16 +3,17 @@ import 'package:flutterweb/constants.dart';
 
 class CallToAction extends StatelessWidget {
   final String text;
+  final Function callback;
 
-  const CallToAction({Key? key, required this.text}) : super(key: key);
+  const CallToAction({Key? key, required this.text, required this.callback}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: () {
-          print("call to action pressed pressed");
+        onTap: (){
+          callback();
         },
         child: IntrinsicWidth(
           child: Container(
