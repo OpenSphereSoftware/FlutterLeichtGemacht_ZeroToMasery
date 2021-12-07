@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo/application/auth/authbloc/auth_bloc.dart';
 import 'package:todo/application/todos/observer/observer_bloc.dart';
 import 'package:todo/presentation/home/widgets/flexible_space.dart';
+import 'package:todo/presentation/home/widgets/progress_bar.dart';
 import 'package:todo/presentation/home/widgets/todo_item.dart';
 
 class HomeBody extends StatelessWidget {
@@ -37,6 +38,12 @@ class HomeBody extends StatelessWidget {
                   pinned: true,
                   
                   flexibleSpace: const FlexibleSpace(),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: _spacing, right: _spacing),
+                  sliver: SliverToBoxAdapter(
+                    child: ProgressBar(todos: state.todos),
+                  ),
                 ),
                 SliverPadding(
                     padding: const EdgeInsets.all(_spacing),
