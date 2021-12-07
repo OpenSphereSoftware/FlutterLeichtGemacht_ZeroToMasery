@@ -14,6 +14,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  responsive_framework: ^0.1.5
+  routemaster: ^0.9.5
+  url_strategy: ^0.2.0
 
 dev_dependencies:
   flutter_test:
