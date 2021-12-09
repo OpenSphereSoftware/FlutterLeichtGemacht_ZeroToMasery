@@ -26,7 +26,7 @@ class _CounterAppPageState extends State<CounterAppPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Counter App"),
+        title: const Text("Counter App"),
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
@@ -43,13 +43,13 @@ class _CounterAppPageState extends State<CounterAppPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Counter"),
-                SizedBox(
+                const Text("Counter"),
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
                   _counter.toString(),
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )
               ],
             ),
@@ -66,13 +66,13 @@ class _CounterAppPageState extends State<CounterAppPage> {
               heroTag: "btn1",
               onPressed: () => _decrementCounter(),
               backgroundColor: Colors.red,
-              child: Icon(Icons.remove),
+              child: const Icon(Icons.remove),
             ),
             FloatingActionButton(
               heroTag: "btn2",
               onPressed: () => _incrementCounter(),
               backgroundColor: Colors.blue,
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
             ),
           ],
         ),

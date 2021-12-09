@@ -11,13 +11,13 @@ class Star extends StatelessWidget {
       width: 2,
       height: 2,
       decoration: BoxDecoration(shape: BoxShape.circle,
-      color: Color(0xFFC9E9FC),
+      color: const Color(0xFFC9E9FC),
       boxShadow: [
         BoxShadow(
-          color: Color(0xFFC9E9FC).withOpacity(0.5),
+          color: const Color(0xFFC9E9FC).withOpacity(0.5),
           spreadRadius: 5,
           blurRadius: 7,
-          offset: Offset(0,0)
+          offset: const Offset(0,0)
         )
       ]
       ),

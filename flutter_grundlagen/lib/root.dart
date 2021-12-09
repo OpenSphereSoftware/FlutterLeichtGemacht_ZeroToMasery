@@ -22,7 +22,7 @@ class _RootWidgetState extends State<RootWidget> {
 
       body: IndexedStack(
         index: _currentIndex,
-        children: [
+        children: const [
           WidgetsExamplesPage(),
           CounterAppPage(),
           ThemeAnimationPage()
@@ -38,8 +38,8 @@ class _RootWidgetState extends State<RootWidget> {
         currentIndex: _currentIndex,
         unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.white,
-        backgroundColor: Theme.of(context).appBarTheme.color,
-        items: [
+        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+        items: const [
         BottomNavigationBarItem(icon: Icon(Icons.star), label: "examples"),
         BottomNavigationBarItem(icon: Icon(Icons.add), label: "counter"),
         BottomNavigationBarItem(icon: Icon(Icons.color_lens), label: "theme"),

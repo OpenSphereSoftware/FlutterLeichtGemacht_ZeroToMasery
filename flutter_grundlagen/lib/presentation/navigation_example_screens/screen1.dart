@@ -9,7 +9,7 @@ class Screen1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.green,
-          title: Text("Screen 1"),
+          title: const Text("Screen 1"),
           centerTitle: true),
       body: Center(
         child: CustomButton(

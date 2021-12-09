@@ -14,10 +14,10 @@ class Sun extends StatelessWidget {
           child: Container(
             height: 50,
             width: 50,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
-                  colors: const [
+                  colors: [
                     Color(0xDDFC554F), 
                     Color(0xDDFFF79E)],
                   begin: Alignment.bottomLeft,

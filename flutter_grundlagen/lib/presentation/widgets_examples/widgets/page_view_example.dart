@@ -49,22 +49,22 @@ class SinglePage extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.grey[700], borderRadius: BorderRadius.circular(15)),
       child: Padding(
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         child: Column(
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 18),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
               text,
-              style: TextStyle(color: Colors.white, fontSize: 15),
+              style: const TextStyle(color: Colors.white, fontSize: 15),
               textAlign: TextAlign.center,
             ),
           ],
