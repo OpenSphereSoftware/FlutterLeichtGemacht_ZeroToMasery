@@ -27,7 +27,7 @@ class ContainerTextExample extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.blue[200],
                 borderRadius: BorderRadius.circular(10)),
-            child: Text(
+            child: const Text(
               "Text Example",
               style: TextStyle(
                   fontStyle: FontStyle.italic,

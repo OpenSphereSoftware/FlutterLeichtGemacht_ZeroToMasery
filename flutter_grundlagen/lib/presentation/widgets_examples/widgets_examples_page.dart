@@ -17,69 +17,71 @@ class WidgetsExamplesPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.grey[900],
         appBar: AppBar(
-          leading: Icon(
+          leading: const Icon(
             Icons.home,
             size: 30,
           ),
           centerTitle: true,
           backgroundColor: Colors.blue,
-          title: Text("Widgets Examples"),
+          title: const Text("Widgets Examples"),
         ),
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ContainerTextExample(),
-                SizedBox(
+                const ContainerTextExample(),
+                const SizedBox(
                   height: 10,
                 ),
-                RowExpandedExample(),
-                SizedBox(
+                const RowExpandedExample(),
+                const SizedBox(
                   height: 30,
                 ),
-                ProfilePicture(),
-                SizedBox(
+                const ProfilePicture(),
+                const SizedBox(
                   height: 30,
                 ),
-                RectImage(),
-                SizedBox(
+                const RectImage(),
+                const SizedBox(
                   height: 30,
                 ),
-                MediaQueryExample(),
-                SizedBox(
+                const MediaQueryExample(),
+                const SizedBox(
                   height: 30,
                 ),
-                PageViewExample(),
-                SizedBox(
+                const PageViewExample(),
+                const SizedBox(
                   height: 30,
                 ),
                 IconButton(
                     splashColor: Colors.blue,
                     onPressed: () {
+                      // ignore: avoid_print
                       print("Icon Button pressed!");
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.home,
                       color: Colors.white,
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 TextButton(
                     onPressed: () {
+                      // ignore: avoid_print
                       print("Text Button Pressed");
                     },
                     child: Container(
                         color: Colors.grey,
-                        child: Text(
+                        child: const Text(
                           "Text Button",
                           style: TextStyle(color: Colors.white),
                         ))),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomButton(
@@ -89,7 +91,7 @@ class WidgetsExamplesPage extends StatelessWidget {
                   },
                   text: 'Got to Screen 2',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomButton(
@@ -99,7 +101,7 @@ class WidgetsExamplesPage extends StatelessWidget {
                   },
                   text: 'Go to Screen 1',
                 ),
-                SizedBox(
+                const SizedBox(
                             width: 15,
                           ),
                           Switch(value: Provider.of<ThemeService>(context).isDarkModeOn, onChanged: (value) {

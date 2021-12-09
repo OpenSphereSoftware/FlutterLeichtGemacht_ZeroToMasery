@@ -9,7 +9,7 @@ class Screen2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.yellow,
-          title: Text("Screen 2"),
+          title: const Text("Screen 2"),
           centerTitle: true),
       body: Center(
         child: Column(
@@ -22,7 +22,7 @@ class Screen2 extends StatelessWidget {
                 },
                 text: "Navigate Back",
                 buttonColor: Colors.yellow),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
             CustomButton(
                 onPressed: () {
                    Navigator.of(context).pushReplacementNamed("/screen1");

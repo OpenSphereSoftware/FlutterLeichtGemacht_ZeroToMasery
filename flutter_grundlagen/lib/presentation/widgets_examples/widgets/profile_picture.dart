@@ -10,7 +10,7 @@ class ProfilePicture extends StatelessWidget {
       width: 200,
       child: Stack(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 200,
             child: CircleAvatar(
               radius: 200,
@@ -28,7 +28,7 @@ class ProfilePicture extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
                     "Flutter Freelancer",
                     style: TextStyle(

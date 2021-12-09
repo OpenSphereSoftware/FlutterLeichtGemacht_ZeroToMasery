@@ -17,17 +17,17 @@ class ThemeAnimationPage extends StatelessWidget {
         backgroundColor: themeData.scaffoldBackgroundColor,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: themeData.appBarTheme.color,
-          title: Text("Theme Animation"),
+          backgroundColor: themeData.appBarTheme.backgroundColor,
+          title: const Text("Theme Animation"),
         ),
         body: Center(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Material(
               borderRadius: BorderRadius.circular(15),
               elevation: 20,
               child: ConstrainedBox(
-                constraints: BoxConstraints(minWidth: double.infinity),
+                constraints: const BoxConstraints(minWidth: double.infinity),
                 child: Container(
                   height: 500,
                   decoration: BoxDecoration(
@@ -40,9 +40,9 @@ class ThemeAnimationPage extends StatelessWidget {
                                   Color(0xFF200F75),
                                 ]
                               : [
-                                  Color(0xDDFFFA66),
-                                  Color(0xDDFFA057),
-                                  Color(0xDD940B99)
+                                  const Color(0xDDFFFA66),
+                                  const Color(0xDDFFA057),
+                                  const Color(0xDD940B99)
                                 ],
                           begin: Alignment.bottomCenter,
                           end: Alignment.topCenter)),
@@ -52,52 +52,52 @@ class ThemeAnimationPage extends StatelessWidget {
                           top: 70,
                           right: 50,
                           child: AnimatedOpacity(
-                              duration: Duration(milliseconds: 200),
+                              duration: const Duration(milliseconds: 200),
                               opacity: themeServie.isDarkModeOn ? 1 : 0,
-                              child: Star())),
+                              child: const Star())),
                       Positioned(
                           top: 150,
                           left: 60,
                           child: AnimatedOpacity(
-                              duration: Duration(milliseconds: 200),
+                              duration: const Duration(milliseconds: 200),
                               opacity: themeServie.isDarkModeOn ? 1 : 0,
-                              child: Star())),
+                              child: const Star())),
                       Positioned(
                           top: 40,
                           left: 200,
                           child: AnimatedOpacity(
-                              duration: Duration(milliseconds: 200),
+                              duration: const Duration(milliseconds: 200),
                               opacity: themeServie.isDarkModeOn ? 1 : 0,
-                              child: Star())),
+                              child: const Star())),
                       Positioned(
                           top: 50,
                           left: 50,
                           child: AnimatedOpacity(
-                              duration: Duration(milliseconds: 200),
+                              duration: const Duration(milliseconds: 200),
                               opacity: themeServie.isDarkModeOn ? 1 : 0,
-                              child: Star())),
+                              child: const Star())),
                       Positioned(
                           top: 100,
                           right: 200,
                           child: AnimatedOpacity(
-                              duration: Duration(milliseconds: 200),
+                              duration: const Duration(milliseconds: 200),
                               opacity: themeServie.isDarkModeOn ? 1 : 0,
-                              child: Star())),
+                              child: const Star())),
                       //
 
                       AnimatedPositioned(
-                          duration: Duration(milliseconds: 400),
+                          duration: const Duration(milliseconds: 400),
                           top: themeServie.isDarkModeOn ? 100 : 130,
                           right: themeServie.isDarkModeOn ? 100 : -40,
                           child: AnimatedOpacity(
-                              duration: Duration(milliseconds: 300),
+                              duration: const Duration(milliseconds: 300),
                               opacity: themeServie.isDarkModeOn ? 1 : 0,
-                              child: Moon())),
+                              child: const Moon())),
                       AnimatedPadding(
-                        duration: Duration(milliseconds: 200),
+                        duration: const Duration(milliseconds: 200),
                         padding: EdgeInsets.only(
                             top: themeServie.isDarkModeOn ? 110 : 50),
-                        child: Center(child: Sun()),
+                        child: const Center(child: Sun()),
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
@@ -106,9 +106,9 @@ class ThemeAnimationPage extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                               color: themeServie.isDarkModeOn
-                                  ? themeData.appBarTheme.color
+                                  ? themeData.appBarTheme.backgroundColor
                                   : themeData.colorScheme.primary,
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(15),
                                   bottomRight: Radius.circular(15))),
                           child: Column(
@@ -141,7 +141,7 @@ class ThemeAnimationPage extends StatelessWidget {
                               const SizedBox(
                                 height: 40,
                               ),
-                              ThemeSwitcher()
+                              const ThemeSwitcher()
                             ],
                           ),
                         ),

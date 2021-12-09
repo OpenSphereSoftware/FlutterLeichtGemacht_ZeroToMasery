@@ -4,7 +4,7 @@ class ThemeService extends ChangeNotifier {
   bool isDarkModeOn = false;
 
   void toggleTheme() {
-    this.isDarkModeOn = !this.isDarkModeOn;
+    isDarkModeOn = !isDarkModeOn;
     notifyListeners();
   }
 }
