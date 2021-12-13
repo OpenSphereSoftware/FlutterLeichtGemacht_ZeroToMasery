@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
           title: 'Advicer',
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          themeMode:
-              themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
+          themeMode: themeService.useSystemTheme ? ThemeMode.system :
+             themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
           home: BlocProvider(
               create: (BuildContext context) => sl<AdvicerBloc>(),
               child: const AdvicerPage()),

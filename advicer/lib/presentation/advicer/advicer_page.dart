@@ -15,13 +15,25 @@ class AdvicerPage extends StatelessWidget {
     final themeData = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-          centerTitle: true,
+          centerTitle: false,
           actions: [
-            Switch(
-                value: Provider.of<ThemeService>(context).isDarkModeOn,
+            Visibility(
+              visible: !Provider.of<ThemeService>(context).useSystemTheme,
+              child: Switch(
+                  value: Provider.of<ThemeService>(context).isDarkModeOn,
+                  onChanged: (_) {
+                    Provider.of<ThemeService>(context, listen: false)
+                        .toggleTheme();
+                  }),
+            ),
+
+
+          Switch(
+                value: Provider.of<ThemeService>(context).useSystemTheme,
+                activeColor: Colors.redAccent,
                 onChanged: (_) {
                   Provider.of<ThemeService>(context, listen: false)
-                      .toggleTheme();
+                      .toggleUseSystemTheme();
                 })
           ],
           title: Text(
