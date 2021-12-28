@@ -1,4 +1,4 @@
-import 'package:advicer/application/advicer/advicer_bloc.dart';
+import 'package:advicer/application/bloc/advicer_new_bloc.dart';
 import 'package:advicer/application/theme/theme_service.dart';
 import 'package:advicer/presentation/advicer/widgets/advice_field.dart';
 import 'package:advicer/presentation/advicer/widgets/custom_button.dart';
@@ -26,9 +26,7 @@ class AdvicerPage extends StatelessWidget {
                         .toggleTheme();
                   }),
             ),
-
-
-          Switch(
+            Switch(
                 value: Provider.of<ThemeService>(context).useSystemTheme,
                 activeColor: Colors.redAccent,
                 onChanged: (_) {
@@ -47,8 +45,8 @@ class AdvicerPage extends StatelessWidget {
             children: [
               Expanded(
                 child: Center(
-                    child: BlocBuilder<AdvicerBloc, AdvicerState>(
-                  bloc: BlocProvider.of<AdvicerBloc>(context),
+                    child: BlocBuilder<AdvicerNewBloc, AdvicerState>(
+                  bloc: BlocProvider.of<AdvicerNewBloc>(context),
                   builder: (context, adviceState) {
                     if (adviceState is AdvicerInitial) {
                       return Text(
