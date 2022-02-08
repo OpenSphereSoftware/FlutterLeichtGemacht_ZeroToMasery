@@ -14,13 +14,15 @@ import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'application/bloc/advicer_new_bloc.dart';
+
 final sl = GetIt.I;  // sl == service Locator
 
 Future<void> init() async {
 
 
   //! application layer 
-  sl.registerFactory(() => AdvicerBloc(usecases: sl()));
+  sl.registerFactory(() => AdvicerNewBloc(usecases: sl()));
   sl.registerLazySingleton<ThemeService>(() => ThemeServiceImpl(themeRepository: sl()));
 
   //! Usecases

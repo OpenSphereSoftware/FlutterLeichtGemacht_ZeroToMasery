@@ -1,4 +1,5 @@
 import 'package:advicer/application/advicer/advicer_bloc.dart';
+import 'package:advicer/application/bloc/advicer_new_bloc.dart';
 import 'package:advicer/application/theme/theme_service.dart';
 import 'package:advicer/presentation/advicer/advicer_page.dart';
 import 'package:advicer/theme.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           themeMode: themeService.useSystemTheme ? ThemeMode.system :
              themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
           home: BlocProvider(
-              create: (BuildContext context) => sl<AdvicerBloc>(),
+              create: (context) => sl<AdvicerNewBloc>(),
               child: const AdvicerPage()),
         );
       },
