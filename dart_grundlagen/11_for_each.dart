@@ -1,12 +1,8 @@
 
-
-
 void main (){
 
     List<int> liste = [3,4,5,6,7,5];
-
     List<int> liste2 = [];
-
 
     /* for(int i = 0;   i < liste.length ;    i++){
 
@@ -25,11 +21,4 @@ void main (){
 
     print(liste);
     print(liste2);
-
-
-
-
-
-    
-
 }

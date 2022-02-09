@@ -1,3 +1,4 @@
+
 void main() {
   Car car1 = Car();
   car1.setColor = "rot";
@@ -29,8 +30,6 @@ class Car {
 
   //! attribute
   late String _color; // late -> weise später einen wert zu
-
-
 
   //! methoden
   void drive() {

@@ -1,4 +1,3 @@
-import 'dart:io';
 
 void main() async {
   DataFetcher fetcher = DataFetcher();

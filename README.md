@@ -42,6 +42,7 @@ Bei diesem Kurs hatte ich den Anspruch dir schnell und effektiv all das Wissen z
 
 * Grundlagenkurs Dart - Grundlagen der Programmierung
 * Grundlagenkurs Flutter - Grundlagen der UI Erstellung mit Flutter
+* iOS und Android spezifische Designs Cupertino & Material
 
 * AdvicerApp - Clean Architecture – Architekturdarstellung (Separation of Layers)
 * AdvicerApp - State Management - State Management mit dem BLoC Pattern (Application & Presentation Layer)
@@ -65,7 +66,6 @@ Bei diesem Kurs hatte ich den Anspruch dir schnell und effektiv all das Wissen z
 
 ### Was kommt noch? - Roadmap
 
-* iOS und Android spezifische Designs Cupertino & Material
 * Internationalisierung einer App
 * State Management Systeme (MVVM, Bloc, Provider, Hooks...)
 * Build for MacOS & Windows
@@ -74,7 +74,5 @@ Bei diesem Kurs hatte ich den Anspruch dir schnell und effektiv all das Wissen z
 
 * Dart Grundlagen - neu & verbessert
 * Flutter Grundlagen - neu & verbessert
-
-
 
 #### Mein Hauptfokus ist jedoch die Qualität und Aktualität der Inhalte.

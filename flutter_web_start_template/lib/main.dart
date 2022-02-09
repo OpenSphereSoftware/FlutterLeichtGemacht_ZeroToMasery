@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutterweb/presentation/dev_page/dev_page.dart';
-import 'package:flutterweb/presentation/home_page/homepage.dart';
 
 void main() {
   runApp(const MyApp());

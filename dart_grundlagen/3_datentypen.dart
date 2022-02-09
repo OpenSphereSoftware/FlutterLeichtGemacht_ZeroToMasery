@@ -1,6 +1,4 @@
 
-
-
 void main(){
   
   int alter = 32;    //Iteger
@@ -8,7 +6,6 @@ void main(){
   double meinDouble = 4.4;  // double
 
   bool meinBool = false; // bool
-
 
   //  ###############################  
 
@@ -38,7 +35,6 @@ void main(){
 
   print(beispiel);
 
-
   // ! Statisch
 
   int alter1 = 32;    //Iteger
@@ -59,12 +55,9 @@ void main(){
 
   var meinString2 = "Der Ball";
 
-
   dynamic variable3 ;
 
   variable3 = 3;
 
   variable3 = "string";
-
-
 }

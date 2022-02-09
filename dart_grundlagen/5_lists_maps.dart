@@ -1,6 +1,4 @@
 
-
-
 void main (){
 
   List<int> liste = [1,2,3];
@@ -19,7 +17,6 @@ void main (){
 
   print(liste);
 
-
   Map<String,String> map = {"key1":"value1", "key2":"value2",};
 
   print(map.length);
@@ -27,6 +24,4 @@ void main (){
   print(map.keys);
 
   print(map["key2"]);
-
-
 }

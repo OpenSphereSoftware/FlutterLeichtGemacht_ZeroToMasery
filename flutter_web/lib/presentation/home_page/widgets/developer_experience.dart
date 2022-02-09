@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutterweb/constants.dart';
 import 'package:flutterweb/presentation/core/buttons/call_to_action.dart';
 import 'package:responsive_framework/responsive_framework.dart';

@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 import 'package:todo/core/Failures/todo_failures.dart';
 import 'package:todo/domain/entities/todo.dart';
 import 'package:todo/domain/entities/todo_color.dart';

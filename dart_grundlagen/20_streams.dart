@@ -1,7 +1,7 @@
+
 import 'dart:async';
 
 void main() {
-
   Stream numberStream = NumberGenerator().getStream.asBroadcastStream();
   //! broadcast -> ermöglicht mehrere subscriber
   StreamSubscription sub1 = numberStream.listen((event) {
@@ -15,12 +15,9 @@ void main() {
   sub1.resume(); //!weiter
   sub1.cancel(); //! subscription beenden */
 
-
   StreamSubscription sub2 = numberStream.listen((event) {
     print("sub2  :  $event");
   });
-
- 
 }
 
 class NumberGenerator {

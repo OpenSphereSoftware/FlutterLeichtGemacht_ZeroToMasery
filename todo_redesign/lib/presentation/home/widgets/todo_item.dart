@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/src/provider.dart';
 import 'package:todo/application/todos/controller/controller_bloc.dart';
 import 'package:todo/domain/entities/todo.dart';
 import 'package:todo/presentation/routes/router.gr.dart';

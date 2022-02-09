@@ -1,4 +1,3 @@
-import 'package:advicer/application/advicer/advicer_bloc.dart';
 import 'package:advicer/application/bloc/advicer_new_bloc.dart';
 import 'package:advicer/application/theme/theme_service.dart';
 import 'package:advicer/presentation/advicer/advicer_page.dart';

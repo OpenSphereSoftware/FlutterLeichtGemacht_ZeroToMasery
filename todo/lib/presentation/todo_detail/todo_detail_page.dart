@@ -13,7 +13,6 @@ class TodoDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final themeData = Theme.of(context);
     return BlocProvider(
       create: (context) =>
           sl<TodoformBloc>()..add(InitializeTodoDetailPage(todo: todo)),

@@ -1,16 +1,12 @@
 
-
-
 void main (){
 
     int alter = 16;
-
     String name = "Hans";
 
     print("vor dem switch");
 
     switch (name){
-
       case "Peter":
         print("ich bin Peter");
         break;
@@ -20,7 +16,5 @@ void main (){
       default:
         print("keine ahnung");
     }
-
      print("nach dem switch");
-
 }

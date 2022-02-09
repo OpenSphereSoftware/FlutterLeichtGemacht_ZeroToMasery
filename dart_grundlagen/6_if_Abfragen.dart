@@ -1,6 +1,4 @@
 
-
-
 void main (){
 
     int alter = 16;

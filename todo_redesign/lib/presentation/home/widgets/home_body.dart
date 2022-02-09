@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo/application/auth/authbloc/auth_bloc.dart';
 import 'package:todo/application/todos/observer/observer_bloc.dart';
 import 'package:todo/presentation/home/widgets/flexible_space.dart';
 import 'package:todo/presentation/home/widgets/progress_bar.dart';
