@@ -4,11 +4,7 @@
 
 Vollumfassender Flutter Kurs um schnell und effektiv in die professionelle App-Entwicklung zu starten. Und vieles mehr!
 
-https://www.udemy.com/course/dart-flutter-leicht-gemacht/?referralCode=5896E52EDB9608456452
-
-
-
-*Mit diesem Kurs möchten wir Entwickler weltweit ermächtigen ihre Projekte professionell umzusetzen und vereinen sie in einer tollen Community!*
+*"Mit diesem Kurs möchten wir Entwickler weltweit ermächtigen ihre Projekte professionell umzusetzen und vereinen sie in einer tollen Community!"*
 
 Steige mit diesem Kurs in die App Entwicklung mit Flutter ein. Dieser Kurs geht weit über die Grundlagen hinaus und unterscheidet sich in dem zu anderen Kursen dass du hier wirklich professionelle App Entwicklung auf basis Jahrelanger Flutter Freelancer Erfahrung lernst.
 
