@@ -18,7 +18,7 @@ Außerdem: Flutter und die Sprache Dart sind toll, es macht richtig Spaß damit 
 
 German Flutter Community Wir haben mittlerweile die größte aktive deutsche Flutter Community auf einem eigenen Discord Server. Hier kannst du dich mit anderen Entwicklern austauschen und gegenseitig unterstützen. Wir freuen uns auch dich dabei zu haben!
 
-### ✅  IMMER AKTUELL:   Der Kurs und alle Projekte wurden zuletzt März 2022 aktualisiert.
+### ✅  IMMER AKTUELL:   Der Kurs wird weiterhin aktuell gehalten 
 
 ### Was wirst du lernen?
 
