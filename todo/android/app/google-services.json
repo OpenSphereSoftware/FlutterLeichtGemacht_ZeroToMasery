@@ -37,6 +37,13 @@
             {
               "client_id": "412763203883-9ov1dei3bk3sml14vjisub2jnlhal1dc.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "412763203883-fvkis5ur3erfc8548e0q5rposk64f7c5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todo"
+              }
             }
           ]
         }
