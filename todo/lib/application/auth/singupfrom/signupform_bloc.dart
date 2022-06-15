@@ -16,7 +16,11 @@ class SignupformBloc extends Bloc<SignupformEvent, SignupformState> {
             authFailureOrSuccessOption: none())) {
     on<RegisterWithEmailAndPasswordPressed>((event, emit) async {
       if (event.email == null || event.password == null) {
-        emit(state.copyWith(isSubmitting: false, showValidationMessages: true));
+        emit(state.copyWith(
+          isSubmitting: false,
+          showValidationMessages: true,
+          authFailureOrSuccessOption: none(),
+        ));
       } else {
         emit(state.copyWith(isSubmitting: true, showValidationMessages: false));
         final failureOrSuccess =
@@ -31,7 +35,11 @@ class SignupformBloc extends Bloc<SignupformEvent, SignupformState> {
 
     on<SignInWithEmailAndPasswordPressed>((event, emit) async {
       if (event.email == null || event.password == null) {
-        emit(state.copyWith(isSubmitting: false, showValidationMessages: true));
+        emit(state.copyWith(
+          isSubmitting: false,
+          showValidationMessages: true,
+          authFailureOrSuccessOption: none(),
+        ));
       } else {
         emit(state.copyWith(isSubmitting: true, showValidationMessages: false));
         final failureOrSuccess =

@@ -18,7 +18,11 @@ class SignupformBloc extends Bloc<SignupformEvent, SignupformState> {
       if (event.email == null || event.password == null) {
         emit(state.copyWith(isSubmitting: false, showValidationMessages: true));
       } else {
-        emit(state.copyWith(isSubmitting: true, showValidationMessages: false));
+        emit(state.copyWith(
+          isSubmitting: true,
+          showValidationMessages: false,
+          authFailureOrSuccessOption: none(),
+        ));
         final failureOrSuccess =
             await authRepository.registerWithEmailAndPassword(
                 email: event.email!, password: event.password!);
@@ -33,7 +37,11 @@ class SignupformBloc extends Bloc<SignupformEvent, SignupformState> {
       if (event.email == null || event.password == null) {
         emit(state.copyWith(isSubmitting: false, showValidationMessages: true));
       } else {
-        emit(state.copyWith(isSubmitting: true, showValidationMessages: false));
+        emit(state.copyWith(
+          isSubmitting: true,
+          showValidationMessages: false,
+          authFailureOrSuccessOption: none(),
+        ));
         final failureOrSuccess =
             await authRepository.signInWithEmailAndPassword(
                 email: event.email!, password: event.password!);
