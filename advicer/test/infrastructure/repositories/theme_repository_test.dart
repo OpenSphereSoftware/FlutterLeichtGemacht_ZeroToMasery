@@ -1,5 +1,3 @@
-
-
 import 'package:advicer/domain/failures/failures.dart';
 import 'package:advicer/domain/reposetories/theme_repositroy.dart';
 import 'package:advicer/infrastructure/datasources/theme_local_datasource.dart';
@@ -13,59 +11,57 @@ import 'package:mockito/mockito.dart';
 import 'theme_repository_test.mocks.dart';
 
 @GenerateMocks([ThemeLocalDatasource])
-void main (){
-
+void main() {
   late MockThemeLocalDatasource mockThemeLocalDatasource;
   late ThemeRepository themeRepository;
 
-  setUp((){
+  setUp(() {
     mockThemeLocalDatasource = MockThemeLocalDatasource();
-    themeRepository = ThemeRespositoryImpl(themeLocalDatasource: mockThemeLocalDatasource);
+    themeRepository =
+        ThemeRespositoryImpl(themeLocalDatasource: mockThemeLocalDatasource);
   });
 
-  group("getThemeMode", (){
-     const t_themeMode = true;
-
-     test("should return theme mode if cached data is present", ()async{
-       // arrange
-       when(mockThemeLocalDatasource.getCachedThemeData()).thenAnswer((_) async => t_themeMode);
-
-       // act
-       final result = await themeRepository.getThemeMode();
-
-       // assert
-       expect(result, const Right(t_themeMode));
-       verify(mockThemeLocalDatasource.getCachedThemeData());
-       verifyNoMoreInteractions(mockThemeLocalDatasource);
-
-     });
-
-     test("should return CacheFailure if local datasource throws a chache exeption", ()async{
-       // arrange
-       when(mockThemeLocalDatasource.getCachedThemeData()).thenThrow(CacheException());
-
-       // act
-       final result = await themeRepository.getThemeMode();
-
-       // assert
-       expect(result, Left(CacheFailure()));
-       verify(mockThemeLocalDatasource.getCachedThemeData());
-       verifyNoMoreInteractions(mockThemeLocalDatasource);
-
-     });
-
-  });
-
-
-  group("setThemeMode", (){
-
+  group("getThemeMode", () {
     const t_themeMode = true;
 
-    test("should call function to chache theme mode in local datasource", (){
+    test("should return theme mode if cached data is present", () async {
+      // arrange
+      when(mockThemeLocalDatasource.getCachedThemeData())
+          .thenAnswer((_) async => t_themeMode);
 
+      // act
+      final result = await themeRepository.getThemeMode();
 
+      // assert
+      expect(result, const Right(t_themeMode));
+      verify(mockThemeLocalDatasource.getCachedThemeData());
+      verifyNoMoreInteractions(mockThemeLocalDatasource);
+    });
+
+    test(
+        "should return CacheFailure if local datasource throws a chache exeption",
+        () async {
+      // arrange
+      when(mockThemeLocalDatasource.getCachedThemeData())
+          .thenThrow(CacheException());
+
+      // act
+      final result = await themeRepository.getThemeMode();
+
+      // assert
+      expect(result, Left(CacheFailure()));
+      verify(mockThemeLocalDatasource.getCachedThemeData());
+      verifyNoMoreInteractions(mockThemeLocalDatasource);
+    });
+  });
+
+  group("setThemeMode", () {
+    const t_themeMode = true;
+
+    test("should call function to chache theme mode in local datasource", () {
       //arrange
-      when(mockThemeLocalDatasource.cacheThemeData(mode: anyNamed("mode"))).thenAnswer((_) async => true);
+      when(mockThemeLocalDatasource.cacheThemeData(mode: anyNamed("mode")))
+          .thenAnswer((_) async => true);
 
       // act
       themeRepository.setThemeMode(mode: t_themeMode);
@@ -74,9 +70,4 @@ void main (){
       verify(mockThemeLocalDatasource.cacheThemeData(mode: t_themeMode));
     });
   });
-
-
-
-
-
 }

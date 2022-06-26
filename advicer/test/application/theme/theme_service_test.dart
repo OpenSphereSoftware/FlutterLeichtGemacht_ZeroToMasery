@@ -75,10 +75,19 @@ void main() {
     test(
         "should get a theme mode from local data source and use it and notify listeners",
         () async {
-      //arragen
+      //arrage
+      themeService.useSystemTheme = false;
+      when(mockThemeRepository.getUseSytemTheme())
+          .thenAnswer((_) async => const Right(false));
       themeService.isDarkModeOn = true;
       when(mockThemeRepository.getThemeMode())
           .thenAnswer((_) async => const Right(t_mode));
+
+      when(mockThemeRepository.setThemeMode(mode: anyNamed("mode")))
+          .thenAnswer((_) async => true);
+
+      when(mockThemeRepository.setUseSytemTheme(useSystemTheme: false))
+          .thenAnswer((_) async => true);
 
       // act
       await themeService.init();
@@ -86,16 +95,26 @@ void main() {
       //assert
       expect(themeService.isDarkModeOn, t_mode);
       verify(mockThemeRepository.getThemeMode());
-      expect(listenerCount, 1);
+      expect(listenerCount, 2);
     });
 
     test(
         "should start with dark mode if no theme is returned from local source and notify listeners",
         () async {
-      //arragen
+      //arrage
       themeService.isDarkModeOn = true;
       when(mockThemeRepository.getThemeMode())
           .thenAnswer((_) async => Left(CacheFailure()));
+
+      themeService.useSystemTheme = false;
+      when(mockThemeRepository.getUseSytemTheme())
+          .thenAnswer((_) async => const Right(false));
+
+      when(mockThemeRepository.setThemeMode(mode: anyNamed("mode")))
+          .thenAnswer((_) async => true);
+
+      when(mockThemeRepository.setUseSytemTheme(useSystemTheme: false))
+          .thenAnswer((_) async => true);
 
       // act
       await themeService.init();
@@ -103,7 +122,7 @@ void main() {
       //assert
       expect(themeService.isDarkModeOn, true);
       verify(mockThemeRepository.getThemeMode());
-      expect(listenerCount, 1);
+      expect(listenerCount, 2);
     });
   });
 }
