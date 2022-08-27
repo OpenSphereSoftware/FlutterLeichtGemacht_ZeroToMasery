@@ -1,4 +1,4 @@
-package com.example.flutter_grundlagen
+package com.example.fgrund
 
 import io.flutter.embedding.android.FlutterActivity
 
