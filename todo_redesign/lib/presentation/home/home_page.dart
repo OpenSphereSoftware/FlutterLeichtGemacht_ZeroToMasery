@@ -9,6 +9,7 @@ import 'package:todo/injection.dart';
 import 'package:todo/presentation/home/widgets/home_body.dart';
 import 'package:todo/presentation/routes/router.gr.dart';
 
+@RoutePage()
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget {
         listeners: [
           BlocListener<AuthBloc, AuthState>(listener: (context, state) {
             if (state is AuthStateUnauthenticated) {
-              AutoRouter.of(context).push(const SignUpPageRoute());
+              AutoRouter.of(context).push(const SignUpRoute());
             }
           }),
           BlocListener<ControllerBloc, ControllerState>(
