@@ -1,13 +1,10 @@
-
-
 import 'package:auto_route/auto_route.dart';
-import 'package:todo/presentation/home/home_page.dart';
-import 'package:todo/presentation/signup/signup_page.dart';
-import 'package:todo/presentation/splash/splash_page.dart';
-import 'package:todo/presentation/todo_detail/todo_detail_page.dart';
+import 'package:todo/presentation/routes/router.gr.dart';
 
-
-@MaterialAutoRouter(
+// **********************
+// Old Aout route Syntax:
+// **********************
+/*@MaterialAutoRouter(
   routes: <AutoRoute>[
     AutoRoute(page: SplashPage, initial: true),
     AutoRoute(page: SignUpPage, initial: false),
@@ -16,4 +13,23 @@ import 'package:todo/presentation/todo_detail/todo_detail_page.dart';
   ]
 
 )
-class $AppRouter {}
+class $AppRouter {}*/
+
+// **********************
+// New Aout route Syntax:
+// **********************
+@AutoRouterConfig()
+class AppRouter extends $AppRouter {
+  @override
+  RouteType get defaultRouteType =>
+      const RouteType.material(); //.cupertino, .adaptive ..etc
+
+  @override
+  final List<AutoRoute> routes = [
+    AutoRoute(page: SplashRoute.page, path: '/'),
+    AutoRoute(page: HomeRoute.page),
+    AutoRoute(page: SignUpRoute.page),
+    AutoRoute(page: TodoDetailRoute.page),
+
+  ];
+}

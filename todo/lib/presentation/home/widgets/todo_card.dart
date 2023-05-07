@@ -68,7 +68,7 @@ class TodoCard extends StatelessWidget {
           ),
           title: Text(
             todo.title,
-            style: themeData.textTheme.headline1!
+            style: themeData.textTheme.displayLarge!
                 .copyWith(fontSize: 16, fontWeight: FontWeight.bold),
           ),
         ),

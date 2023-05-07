@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo/application/todos/todoForm/todoform_bloc.dart';
@@ -6,6 +7,8 @@ import 'package:todo/injection.dart';
 import 'package:todo/presentation/routes/router.gr.dart';
 import 'package:todo/presentation/todo_detail/widgets/safe_progress_overlay.dart';
 import 'package:todo/presentation/todo_detail/widgets/todo_form.dart';
+
+@RoutePage(name: 'TodoDetailRoute')
 
 class TodoDetail extends StatelessWidget {
   final Todo? todo;
@@ -28,7 +31,7 @@ class TodoDetail extends StatelessWidget {
                           content: Text("failure"),
                           backgroundColor: Colors.redAccent)),
                   (_) => Navigator.of(context).popUntil(
-                      (route) => route.settings.name == HomePageRoute.name)));
+                      (route) => route.settings.name == HomeRoute.name)));
         },
         builder: (context, state) {
           return Scaffold(

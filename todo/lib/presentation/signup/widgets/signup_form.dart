@@ -69,7 +69,7 @@ class SignUpForm extends StatelessWidget {
                         style: themeData.textTheme.bodyText1,
                       )));
                 }, (_) {
-                  AutoRouter.of(context).replace(const HomePageRoute());
+                  AutoRouter.of(context).replace(const HomeRoute());
                 }));
       },
     
