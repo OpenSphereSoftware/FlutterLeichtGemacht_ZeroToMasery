@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:todo/presentation/routes/router.gr.dart';
 
 // **********************
-// Old Aout route Syntax:
+// Old Auto route Syntax:
 // **********************
 /*@MaterialAutoRouter(
   routes: <AutoRoute>[
@@ -16,7 +16,7 @@ import 'package:todo/presentation/routes/router.gr.dart';
 class $AppRouter {}*/
 
 // **********************
-// New Aout route Syntax:
+// New Auto route Syntax:
 // **********************
 @AutoRouterConfig()
 class AppRouter extends $AppRouter {
