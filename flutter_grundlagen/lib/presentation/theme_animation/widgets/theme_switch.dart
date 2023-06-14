@@ -11,11 +11,11 @@ class ThemeSwitcher extends StatelessWidget {
 
     final themeData = Theme.of(context);
 
-    final Color backgroundColor = themeData.colorScheme.primaryVariant;
+    final Color backgroundColor = themeData.colorScheme.primaryContainer;
 
     final Color buttonColor = themeData.colorScheme.onPrimary;
 
-    final Color textColor = themeData.textTheme.headline1!.color!;
+    final Color textColor = themeData.textTheme.displayLarge!.color!;
 
     final List<String> values = ["Light", "Dark"];
     return SizedBox(

@@ -39,7 +39,7 @@ class ProgressBar extends StatelessWidget {
                 "Todos progress",
                 style: Theme.of(context)
                     .textTheme
-                    .headline1!
+                    .displayLarge!
                     .copyWith(fontSize: 16),
               ),
               const SizedBox(height: 10),

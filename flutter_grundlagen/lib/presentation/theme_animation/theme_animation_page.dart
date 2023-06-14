@@ -118,7 +118,7 @@ class ThemeAnimationPage extends StatelessWidget {
                                 Provider.of<ThemeService>(context).isDarkModeOn
                                     ? "Zu dunkel?"
                                     : "Zu hell?",
-                                style: themeData.textTheme.headline1!.copyWith(
+                                style: themeData.textTheme.displayLarge!.copyWith(
                                   fontWeight: FontWeight.w600,
                                   height: 0.9,
                                   fontSize: 21,
@@ -132,7 +132,7 @@ class ThemeAnimationPage extends StatelessWidget {
                                 Provider.of<ThemeService>(context).isDarkModeOn
                                     ? "Lass die Sonne aufgehen"
                                     : "Lass es Nacht werden",
-                                style: themeData.textTheme.bodyText1!.copyWith(
+                                style: themeData.textTheme.bodyLarge!.copyWith(
                                   height: 0.9,
                                   fontSize: 18,
                                 ),

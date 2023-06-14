@@ -18,7 +18,7 @@ class FlexibleSpace extends StatelessWidget {
           Text(
             "Todo",
             textScaleFactor: 2,
-            style: Theme.of(context).textTheme.headline1!
+            style: Theme.of(context).textTheme.displayLarge!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           const Spacer(),

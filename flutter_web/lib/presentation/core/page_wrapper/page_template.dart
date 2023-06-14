@@ -21,7 +21,7 @@ class PageTemplate extends StatelessWidget {
                 preferredSize: Size(double.infinity, 60), child: CustomAppBar())
             : const PreferredSize(
                 preferredSize: Size(double.infinity, 66),
-                child: MenuBar(),
+                child: CustomMenuBar(),
               ),
         body: child);
   }

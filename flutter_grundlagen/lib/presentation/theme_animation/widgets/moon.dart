@@ -9,11 +9,12 @@ class Moon extends StatelessWidget {
       height: 30,
       width: 30,
       decoration: const BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-              colors: [Color(0xFF8983F7), Color(0xFFA3DAFB)],
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight)),
+        shape: BoxShape.circle,
+        gradient: LinearGradient(
+            colors: [Color(0xFF8983F7), Color(0xFFA3DAFB)],
+            begin: Alignment.bottomLeft,
+            end: Alignment.topRight),
+      ),
     );
   }
 }

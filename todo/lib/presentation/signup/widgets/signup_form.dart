@@ -66,7 +66,7 @@ class SignUpForm extends StatelessWidget {
                       backgroundColor: Colors.redAccent,
                       content: Text(
                         mapFailureMessage(failure),
-                        style: themeData.textTheme.bodyText1,
+                        style: themeData.textTheme.bodyLarge,
                       )));
                 }, (_) {
                   AutoRouter.of(context).replace(const HomeRoute());
@@ -87,7 +87,7 @@ class SignUpForm extends StatelessWidget {
               ),
               Text(
                 "Welcome",
-                style: themeData.textTheme.headline1!.copyWith(
+                style: themeData.textTheme.displayLarge!.copyWith(
                     fontSize: 50,
                     fontWeight: FontWeight.w500,
                     letterSpacing: 4),
@@ -97,7 +97,7 @@ class SignUpForm extends StatelessWidget {
               ),
               Text(
                 "Please register or sign in",
-                style: themeData.textTheme.headline1!.copyWith(
+                style: themeData.textTheme.displayLarge!.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     letterSpacing: 4),
@@ -140,7 +140,7 @@ class SignUpForm extends StatelessWidget {
                         backgroundColor: Colors.redAccent,
                         content: Text(
                           "invalid input",
-                          style: themeData.textTheme.bodyText1,
+                          style: themeData.textTheme.bodyLarge,
                         )));
                   }
                 },
@@ -164,7 +164,7 @@ class SignUpForm extends StatelessWidget {
                         backgroundColor: Colors.redAccent,
                         content: Text(
                           "invalid input",
-                          style: themeData.textTheme.bodyText1,
+                          style: themeData.textTheme.bodyLarge,
                         )));
                   }
                 },

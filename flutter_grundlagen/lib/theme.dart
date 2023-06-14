@@ -26,8 +26,8 @@ class AppTheme {
       fontStyle: FontStyle.italic);
 
   static const TextTheme _lightTextTheme = TextTheme(
-    headline1: _lightHeadingText,
-    bodyText1: _lightBodyText,
+    displayLarge: _lightHeadingText,
+    bodyLarge: _lightBodyText,
   );
 
   static final TextStyle _darkThemeHeadingTextStyle =
@@ -37,31 +37,32 @@ class AppTheme {
       _lightBodyText.copyWith(color: _darkTextColorPrimary);
 
   static final TextTheme _darkTextTheme = TextTheme(
-    headline1: _darkThemeHeadingTextStyle,
-    bodyText1: _darkThemeBodyeTextStyle,
+    displayLarge: _darkThemeHeadingTextStyle,
+    bodyLarge: _darkThemeBodyeTextStyle,
   );
 
   static final ThemeData lightTheme = ThemeData(
       scaffoldBackgroundColor: _lightPrimaryColor,
       appBarTheme: const AppBarTheme(
           color: _appbarColorLight,
-          iconTheme:  IconThemeData(color: _iconColor)),
-      bottomAppBarColor: _appbarColorLight,
+          iconTheme: IconThemeData(color: _iconColor)),
+      bottomAppBarTheme: const BottomAppBarTheme(color: _appbarColorLight),
       colorScheme: ColorScheme.light(
           primary: _lightPrimaryColor,
           onPrimary: _lightOnPrimaryColor,
-          primaryVariant: _lightPrimaryVariantColor),
+          primaryContainer: _lightPrimaryVariantColor),
       textTheme: _lightTextTheme);
 
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: _darkPrimaryColor,
       appBarTheme: AppBarTheme(
-          color: _appbarColorDark, iconTheme: const IconThemeData(color: _iconColor)),
-      bottomAppBarColor: _appbarColorDark,
+          color: _appbarColorDark,
+          iconTheme: const IconThemeData(color: _iconColor)),
+      bottomAppBarTheme: BottomAppBarTheme(color: _appbarColorDark),
       colorScheme: ColorScheme.dark(
         primary: _darkPrimaryColor,
         onPrimary: _darkOnPrimaryColor,
-        primaryVariant: _darkPrimaryVariantColor,
+        primaryContainer: _darkPrimaryVariantColor,
       ),
       textTheme: _darkTextTheme);
 }

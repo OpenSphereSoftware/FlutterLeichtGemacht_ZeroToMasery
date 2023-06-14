@@ -15,14 +15,12 @@ class Sun extends StatelessWidget {
             height: 50,
             width: 50,
             decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xDDFC554F), 
-                    Color(0xDDFFF79E)],
+              shape: BoxShape.circle,
+              gradient: LinearGradient(
+                  colors: [Color(0xDDFC554F), Color(0xDDFFF79E)],
                   begin: Alignment.bottomLeft,
-                  end: Alignment.topRight
-                )),
+                  end: Alignment.topRight),
+            ),
           ),
         ),
       ),
@@ -30,11 +28,11 @@ class Sun extends StatelessWidget {
   }
 }
 
-
 class SunShine extends StatelessWidget {
   final double radius;
   final Widget child;
-  const SunShine({ Key? key , required this.radius, required this.child}) : super(key: key);
+  const SunShine({Key? key, required this.radius, required this.child})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,10 +40,8 @@ class SunShine extends StatelessWidget {
       width: radius,
       height: radius,
       decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.white.withOpacity(0.1)),
-          child: Center(child: child),
-      
+          shape: BoxShape.circle, color: Colors.white.withOpacity(0.1)),
+      child: Center(child: child),
     );
   }
 }

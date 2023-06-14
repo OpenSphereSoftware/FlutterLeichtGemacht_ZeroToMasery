@@ -6,9 +6,10 @@ class DevPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  PageTemplate(
-        child: Container(
-      color: Colors.red,
-    ));
+    return PageTemplate(
+      child: Container(
+        color: Colors.red,
+      ),
+    );
   }
 }

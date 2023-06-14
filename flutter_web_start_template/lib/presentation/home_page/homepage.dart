@@ -6,7 +6,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  PageTemplate(child: Container(color: Colors.green,));
-    
+    return PageTemplate(
+      child: Container(
+        color: Colors.green,
+      ),
+    );
   }
 }

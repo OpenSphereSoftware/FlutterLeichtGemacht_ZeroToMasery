@@ -7,7 +7,7 @@ class AppTheme {
   static final Color _lightPrimaryVariantColor = Colors.blueGrey.shade800;
   static final Color _lightOnPrimaryColor = Colors.blueGrey.shade200;
   static const Color _lightTextColorPrimary = Colors.black;
-  static final Color _appbarColorLight = Colors.blue;
+  static const Color _appbarColorLight = Colors.blue;
 
   static final Color _darkPrimaryColor = Colors.blueGrey.shade900;
   static const Color _darkPrimaryVariantColor = Colors.black;
@@ -19,21 +19,22 @@ class AppTheme {
 
   static const Color _accentColorDark = Color.fromRGBO(74, 217, 217, 1);
 
-  static const TextStyle _lightHeadingText =
-       TextStyle(color: _lightTextColorPrimary, fontFamily: "Rubik", fontSize: 20, fontWeight: FontWeight.bold);
+  static const TextStyle _lightHeadingText = TextStyle(
+      color: _lightTextColorPrimary,
+      fontFamily: "Rubik",
+      fontSize: 20,
+      fontWeight: FontWeight.bold);
 
-  static const TextStyle _lightBodyText =  TextStyle(
+  static const TextStyle _lightBodyText = TextStyle(
       color: _lightTextColorPrimary,
       fontFamily: "Rubik",
       fontStyle: FontStyle.italic,
       fontWeight: FontWeight.bold,
-      fontSize: 16
-      
-      );
+      fontSize: 16);
 
   static const TextTheme _lightTextTheme = TextTheme(
-    headline1: _lightHeadingText,
-    bodyText1: _lightBodyText,
+    displayLarge: _lightHeadingText,
+    bodyLarge: _lightBodyText,
   );
 
   static final TextStyle _darkThemeHeadingTextStyle =
@@ -43,33 +44,34 @@ class AppTheme {
       _lightBodyText.copyWith(color: _darkTextColorPrimary);
 
   static final TextTheme _darkTextTheme = TextTheme(
-    headline1: _darkThemeHeadingTextStyle,
-    bodyText1: _darkThemeBodyeTextStyle,
+    displayLarge: _darkThemeHeadingTextStyle,
+    bodyLarge: _darkThemeBodyeTextStyle,
   );
 
   static final ThemeData lightTheme = ThemeData(
       scaffoldBackgroundColor: _lightPrimaryColor,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
           color: _appbarColorLight,
-          iconTheme: const IconThemeData(color: _iconColor)),
-      bottomAppBarColor: _appbarColorLight,
+          iconTheme: IconThemeData(color: _iconColor)),
+      bottomAppBarTheme: const BottomAppBarTheme(color: _appbarColorLight),
       colorScheme: ColorScheme.light(
           primary: _lightPrimaryColor,
           onPrimary: _lightOnPrimaryColor,
           secondary: _accentColorDark,
-          primaryVariant: _lightPrimaryVariantColor),
+          primaryContainer: _lightPrimaryVariantColor),
       textTheme: _lightTextTheme);
 
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: _darkPrimaryColor,
       appBarTheme: AppBarTheme(
-          color: _appbarColorDark, iconTheme: const IconThemeData(color: _iconColor)),
-      bottomAppBarColor: _appbarColorDark,
+          color: _appbarColorDark,
+          iconTheme: const IconThemeData(color: _iconColor)),
+      bottomAppBarTheme: BottomAppBarTheme(color: _appbarColorDark),
       colorScheme: ColorScheme.dark(
         primary: _darkPrimaryColor,
-            secondary: _accentColorDark,
+        secondary: _accentColorDark,
         onPrimary: _darkOnPrimaryColor,
-        primaryVariant: _darkPrimaryVariantColor,
+        primaryContainer: _darkPrimaryVariantColor,
       ),
       textTheme: _darkTextTheme);
 }

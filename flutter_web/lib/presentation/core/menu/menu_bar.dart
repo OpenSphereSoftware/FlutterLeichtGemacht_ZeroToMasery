@@ -5,8 +5,8 @@ import 'package:flutterweb/presentation/core/menu/menu_item.dart';
 import 'package:flutterweb/presentation/dev_page/dev_page.dart';
 import 'package:flutterweb/presentation/eco_page/eco_page.dart';
 
-class MenuBar extends StatelessWidget {
-  const MenuBar({Key? key}) : super(key: key);
+class CustomMenuBar extends StatelessWidget {
+  const CustomMenuBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

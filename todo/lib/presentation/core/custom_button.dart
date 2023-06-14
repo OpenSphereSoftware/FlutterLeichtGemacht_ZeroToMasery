@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(8)),
         child: Center(
           child: Text(buttonText,
-          style: themeData.textTheme.headline1!.copyWith(
+          style: themeData.textTheme.displayLarge!.copyWith(
             fontSize: 14,
             color: Colors.blueGrey[800],
             fontWeight: FontWeight.bold,

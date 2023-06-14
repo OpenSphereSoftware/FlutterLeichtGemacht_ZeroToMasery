@@ -36,7 +36,7 @@ class AdvicerPage extends StatelessWidget {
           ],
           title: Text(
             "Advicer",
-            style: themeData.textTheme.headline1,
+            style: themeData.textTheme.displayLarge,
           )),
       body: Center(
         child: Padding(
@@ -51,7 +51,7 @@ class AdvicerPage extends StatelessWidget {
                     if (adviceState is AdvicerInitial) {
                       return Text(
                         "Your Advice is waiting for you!",
-                        style: themeData.textTheme.headline1,
+                        style: themeData.textTheme.displayLarge,
                       );
                     } else if (adviceState is AdvicerStateLoading) {
                       return CircularProgressIndicator(

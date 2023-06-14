@@ -1,3 +1,4 @@
+
 class AdviceEntity {
   final String advice;
   final int id;

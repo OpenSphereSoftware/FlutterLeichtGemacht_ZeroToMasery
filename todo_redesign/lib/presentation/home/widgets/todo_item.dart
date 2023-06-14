@@ -71,7 +71,7 @@ class TodoItem extends StatelessWidget {
                     todo.title,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: themeData.textTheme.headline1!
+                    style: themeData.textTheme.displayLarge!
                         .copyWith(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
@@ -82,7 +82,7 @@ class TodoItem extends StatelessWidget {
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style:
-                        themeData.textTheme.bodyText2!.copyWith(fontSize: 16),
+                        themeData.textTheme.bodyLarge!.copyWith(fontSize: 16),
                   ),
                   const Spacer(),
                   Row(
