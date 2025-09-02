@@ -14,39 +14,30 @@ void main() {
   print("");
 
   // ========================================
-  // 1. EXPLIZITE TYPENDEKLARATION
+  // 1. WAS SIND VARIABLEN?
   // ========================================
-  print("1. EXPLIZITE TYPENDEKLARATION:");
-  print("-------------------------------");
+  print("1. WAS SIND VARIABLEN?");
+  print("------------------------");
+  print("Variablen sind wie Schubladen, in denen wir Daten speichern können.");
+  print("Jede Schublade hat einen Namen und kann einen Wert enthalten.");
+  print("");
 
-  // Initialisierung: Deklaration + erste Zuweisung in einem Schritt
+  // ========================================
+  // 2. EINFACHE VARIABLENDEKLARATION
+  // ========================================
+  print("2. EINFACHE VARIABLENDEKLARATION:");
+  print("-----------------------------------");
+
+  // Eine Variable erstellen und einen Wert zuweisen
+  String name = "Max Mustermann";
   int alter = 32;
   double groesse = 1.75;
-  String name = "Max Mustermann";
   bool istStudent = true;
 
-  print("Alter: " + alter.toString() + " Jahre");
-  print("Größe: " + groesse.toString() + " m");
   print("Name: " + name);
+  print("Alter: " + alter.toString() + " Jahre");
+  print("Größe: " + groesse.toString() + " Meter");
   print("Ist Student: " + istStudent.toString());
-
-  // ========================================
-  // 2. SPÄTE INITIALISIERUNG (late)
-  // ========================================
-  print("");
-  print("2. SPÄTE INITIALISIERUNG (late):");
-  print("----------------------------------");
-
-  // Deklaration ohne Initialisierung
-  late int alter2;
-  late String beruf;
-
-  // Spätere Zuweisung
-  alter2 = 28;
-  beruf = "Entwickler";
-
-  print("Alter 2: " + alter2.toString() + " Jahre");
-  print("Beruf: " + beruf);
 
   // ========================================
   // 3. VARIABLENWERTE ÄNDERN
@@ -58,93 +49,102 @@ void main() {
   int counter = 0;
   print("Ursprünglicher Wert: " + counter.toString());
 
-  counter = 1;
+  // Wert ändern
+  counter = 5;
   print("Nach Änderung: " + counter.toString());
 
-  counter = counter + 1; // Erhöhung um 1
-  print("Nach Erhöhung: " + counter.toString());
-
-  counter += 1; // Kurzschreibweise für counter = counter + 1
-  print("Nach += 1: " + counter.toString());
+  // Nochmal ändern
+  counter = 10;
+  print("Nach erneuter Änderung: " + counter.toString());
 
   // ========================================
-  // 4. KONSTANTEN (final und const)
+  // 4. SPÄTE INITIALISIERUNG (late)
   // ========================================
   print("");
-  print("4. KONSTANTEN (final und const):");
+  print("4. SPÄTE INITIALISIERUNG (late):");
   print("----------------------------------");
 
-  // final: Wird zur Laufzeit gesetzt, kann nicht mehr geändert werden
+  // Variable erstellen, aber noch keinen Wert zuweisen
+  late String beruf;
+  late int jahresgehalt;
+
+  // Später einen Wert zuweisen
+  beruf = "Programmierer";
+  jahresgehalt = 50000;
+
+  print("Beruf: " + beruf);
+  print("Jahresgehalt: " + jahresgehalt.toString() + " Euro");
+
+  // ========================================
+  // 5. KONSTANTEN (final und const)
+  // ========================================
+  print("");
+  print("5. KONSTANTEN (final und const):");
+  print("----------------------------------");
+
+  // final: Einmal gesetzt, kann nicht mehr geändert werden
   final String geburtsort = "Berlin";
   print("Geburtsort: " + geburtsort);
 
-  // const: Wird zur Kompilierzeit gesetzt, muss unveränderlich sein
+  // const: Wird zur Kompilierzeit gesetzt
   const double pi = 3.14159;
   print("Pi: " + pi.toString());
 
   // ========================================
-  // 5. PRAKTISCHE BEISPIELE
+  // 6. PRAKTISCHE BEISPIELE
   // ========================================
   print("");
-  print("5. PRAKTISCHE BEISPIELE:");
+  print("6. PRAKTISCHE BEISPIELE:");
   print("--------------------------");
 
-  // Benutzerprofil
-  String benutzername = "dart_meister";
-  int anzahlKurse = 5;
-  double durchschnittsnote = 4.8;
-  bool hatZertifikat = true;
-
-  print("Benutzername: @" + benutzername);
-  print("Anzahl belegter Kurse: " + anzahlKurse.toString());
-  print("Durchschnittsnote: " + durchschnittsnote.toString());
-  print("Hat Zertifikat: " + (hatZertifikat ? "Ja" : "Nein"));
-
-  // Berechnung
-  int stundenProTag = 2;
-  int tageProWoche = 5;
-  int wochen = 8;
-
-  int gesamtStunden = stundenProTag * tageProWoche * wochen;
-  print("");
-  print("Kursplanung:");
-  print(
-    stundenProTag.toString() +
-        " Stunden/Tag × " +
-        tageProWoche.toString() +
-        " Tage/Woche × " +
-        wochen.toString() +
-        " Wochen = " +
-        gesamtStunden.toString() +
-        " Stunden",
-  );
-
-  // ========================================
-  // 6. BEST PRACTICES
-  // ========================================
-  print("");
-  print("6. BEST PRACTICES:");
-  print("-------------------");
-
-  // ✅ Gute Variablennamen (beschreibend)
+  // Einfaches Benutzerprofil
   String vorname = "Anna";
   String nachname = "Schmidt";
-  int jahrGeburt = 1995;
+  int geburtsjahr = 1995;
+  String stadt = "Hamburg";
+  bool hatFuehrerschein = true;
+
+  print("Benutzerprofil:");
+  print("Vorname: " + vorname);
+  print("Nachname: " + nachname);
+  print("Geburtsjahr: " + geburtsjahr.toString());
+  print("Stadt: " + stadt);
+  print("Hat Führerschein: " + (hatFuehrerschein ? "Ja" : "Nein"));
+
+  // ========================================
+  // 7. BEST PRACTICES FÜR VARIABLENNAMEN
+  // ========================================
+  print("");
+  print("7. BEST PRACTICES FÜR VARIABLENNAMEN:");
+  print("---------------------------------------");
+
+  // ✅ Gute Variablennamen (beschreibend und verständlich)
+  String benutzername = "dart_anfaenger";
+  int anzahlKurse = 3;
+  double durchschnittsnote = 4.5;
 
   // ❌ Schlechte Variablennamen (nicht beschreibend)
-  String v = "Anna";
-  String n = "Schmidt";
-  int j = 1995;
+  String b = "dart_anfaenger";
+  int a = 3;
+  double d = 4.5;
 
-  print("Gute Namen: " + vorname + " " + nachname + ", geboren " + jahrGeburt.toString());
-  print("Schlechte Namen: " + v + " " + n + ", geboren " + j.toString());
+  print("Gute Namen:");
+  print("- benutzername: " + benutzername);
+  print("- anzahlKurse: " + anzahlKurse.toString());
+  print("- durchschnittsnote: " + durchschnittsnote.toString());
 
   print("");
-  print("🎯 Zusammenfassung:");
-  print("- Variablen speichern Daten");
-  print("- Deklariere den Typ explizit für bessere Lesbarkeit");
+  print("Schlechte Namen:");
+  print("- b: " + b);
+  print("- a: " + a.toString());
+  print("- d: " + d.toString());
+
+  print("");
+  print("🎯 ZUSAMMENFASSUNG:");
+  print("- Variablen sind Schubladen für Daten");
   print("- Verwende beschreibende Namen");
-  print("- final für Laufzeit-Konstanten, const für Kompilierzeit-Konstanten");
+  print("- final für unveränderliche Werte");
+  print("- const für Kompilierzeit-Konstanten");
 }
 
 /*

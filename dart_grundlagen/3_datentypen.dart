@@ -4,9 +4,9 @@
  * 
  * In dieser Lektion lernst du:
  * - Alle grundlegenden Datentypen in Dart
- * - Den Unterschied zwischen statischer und dynamischer Typisierung
- * - String-Verkettung und String-Operationen
+ * - Den Unterschied zwischen den verschiedenen Typen
  * - Wann du welchen Typ verwenden solltest
+ * - String-Verkettung und String-Operationen
  */
 
 void main() {
@@ -14,12 +14,11 @@ void main() {
   print("");
 
   // ========================================
-  // 1. GRUNDLEGENDE DATENTYPEN
+  // 1. INTEGER (int) - GANZE ZAHLEN
   // ========================================
-  print("1. GRUNDLEGENDE DATENTYPEN:");
-  print("------------------------------");
+  print("1. INTEGER (int) - GANZE ZAHLEN:");
+  print("----------------------------------");
 
-  // Integer: Ganze Zahlen (positiv und negativ)
   int alter = 32;
   int jahr = 2024;
   int temperatur = -5;
@@ -29,60 +28,86 @@ void main() {
   print("Jahr: " + jahr.toString());
   print("Temperatur: " + temperatur.toString() + "°C");
   print("Einwohner: " + einwohner.toString());
+  print("Verwendung: Alter, Jahre, Anzahl, etc.");
 
-  // Double: Dezimalzahlen (Fließkommazahlen)
+  // ========================================
+  // 2. DOUBLE - DEZIMALZAHLEN
+  // ========================================
+  print("");
+  print("2. DOUBLE - DEZIMALZAHLEN:");
+  print("----------------------------");
+
   double groesse = 1.75;
   double gewicht = 68.5;
   double pi = 3.14159;
   double temperaturGenau = -5.7;
 
-  print("");
-  print("Größe: " + groesse.toString() + " m");
+  print("Größe: " + groesse.toString() + " Meter");
   print("Gewicht: " + gewicht.toString() + " kg");
   print("Pi: " + pi.toString());
   print("Temperatur genau: " + temperaturGenau.toString() + "°C");
+  print("Verwendung: Größe, Gewicht, Preise, etc.");
 
-  // Boolean: Wahrheitswerte
+  // ========================================
+  // 3. BOOLEAN (bool) - WAHRHEITSWERTE
+  // ========================================
+  print("");
+  print("3. BOOLEAN (bool) - WAHRHEITSWERTE:");
+  print("-------------------------------------");
+
   bool istStudent = true;
   bool hatAuto = false;
-  bool istVolljaehrig = alter >= 18;
+  bool istVolljaehrig = true;
+  bool istRegnerisch = false;
 
-  print("");
   print("Ist Student: " + istStudent.toString());
   print("Hat Auto: " + hatAuto.toString());
   print("Ist volljährig: " + istVolljaehrig.toString());
+  print("Ist regnerisch: " + istRegnerisch.toString());
+  print("Verwendung: Ja/Nein-Fragen, Zustände, etc.");
 
   // ========================================
-  // 2. STRINGS UND TEXTVERARBEITUNG
+  // 4. STRING - TEXT
   // ========================================
   print("");
-  print("2. STRINGS UND TEXTVERARBEITUNG:");
-  print("----------------------------------");
+  print("4. STRING - TEXT:");
+  print("-------------------");
 
-  // Einfache Strings
   String vorname = "Max";
   String nachname = "Mustermann";
   String stadt = "Berlin";
+  String nachricht = "Hallo Welt!";
 
   print("Vorname: " + vorname);
   print("Nachname: " + nachname);
   print("Stadt: " + stadt);
+  print("Nachricht: " + nachricht);
+  print("Verwendung: Namen, Texte, Nachrichten, etc.");
 
-  // String-Verkettung (Konkatenation)
+  // ========================================
+  // 5. STRING-VERKETTUNG
+  // ========================================
+  print("");
+  print("5. STRING-VERKETTUNG:");
+  print("-----------------------");
+
+  // Einfache Verkettung
   String vollerName = vorname + " " + nachname;
   print("Voller Name: " + vollerName);
 
-  // Komplexe String-Verkettung
-  int geburtsjahr = 1992;
-  int aktuellesAlter = jahr - geburtsjahr;
-  String lebenslauf = "Ich bin " + aktuellesAlter.toString() + " Jahre alt und wohne in " + stadt + ".";
-  print("Lebenslauf: " + lebenslauf);
+  // Mit Zahlen
+  String beschreibung = "Ich bin " + alter.toString() + " Jahre alt.";
+  print("Beschreibung: " + beschreibung);
+
+  // Komplexere Verkettung
+  String adresse = vorname + " " + nachname + " wohnt in " + stadt + ".";
+  print("Adresse: " + adresse);
 
   // ========================================
-  // 3. MEHRZEILIGE STRINGS
+  // 6. MEHRZEILIGE STRINGS
   // ========================================
   print("");
-  print("3. MEHRZEILIGE STRINGS:");
+  print("6. MEHRZEILIGE STRINGS:");
   print("--------------------------");
 
   // Dreifache Anführungszeichen für mehrzeilige Strings
@@ -95,27 +120,11 @@ void main() {
   print("Gedicht:");
   print(gedicht);
 
-  // Mit String-Verkettung
-  String kursInfo =
-      """
-  Kurs: """ +
-      vorname +
-      """s Dart-Grundlagen
-  Teilnehmer: """ +
-      alter.toString() +
-      """ Jahre alt
-  Standort: """ +
-      stadt +
-      """
-  """;
-  print("Kursinfo:");
-  print(kursInfo);
-
   // ========================================
-  // 4. STRING-OPERATIONEN
+  // 7. STRING-OPERATIONEN
   // ========================================
   print("");
-  print("4. STRING-OPERATIONEN:");
+  print("7. STRING-OPERATIONEN:");
   print("------------------------");
 
   String text = "  Dart ist eine tolle Programmiersprache!  ";
@@ -129,27 +138,27 @@ void main() {
   print("Enthält 'Python': " + text.contains('Python').toString());
 
   // ========================================
-  // 5. STATISCHE VS. DYNAMISCHE TYPISIERUNG
+  // 8. TYPEN VERGLEICHEN
   // ========================================
   print("");
-  print("5. STATISCHE VS. DYNAMISCHE TYPISIERUNG:");
-  print("------------------------------------------");
+  print("8. TYPEN VERGLEICHEN:");
+  print("-----------------------");
 
-  // Statische Typisierung (explizit)
-  print("STATISCHE TYPISIERUNG (empfohlen):");
-  int alterStatisch = 32;
-  double groesseStatisch = 1.75;
-  bool istStudentStatisch = true;
-  String nameStatisch = "Max";
+  // Explizite Typen (empfohlen)
+  int alterExplizit = 32;
+  double groesseExplizit = 1.75;
+  bool istStudentExplizit = true;
+  String nameExplizit = "Max";
 
-  print("Alter: " + alterStatisch.toString() + " (Typ: " + alterStatisch.runtimeType.toString() + ")");
-  print("Größe: " + groesseStatisch.toString() + " (Typ: " + groesseStatisch.runtimeType.toString() + ")");
-  print("Ist Student: " + istStudentStatisch.toString() + " (Typ: " + istStudentStatisch.runtimeType.toString() + ")");
-  print("Name: " + nameStatisch + " (Typ: " + nameStatisch.runtimeType.toString() + ")");
+  print("Explizite Typen (empfohlen):");
+  print("Alter: " + alterExplizit.toString() + " (Typ: " + alterExplizit.runtimeType.toString() + ")");
+  print("Größe: " + groesseExplizit.toString() + " (Typ: " + groesseExplizit.runtimeType.toString() + ")");
+  print("Ist Student: " + istStudentExplizit.toString() + " (Typ: " + istStudentExplizit.runtimeType.toString() + ")");
+  print("Name: " + nameExplizit + " (Typ: " + nameExplizit.runtimeType.toString() + ")");
 
-  // Automatische Typisierung (var)
+  // Automatische Typen (var)
   print("");
-  print("AUTOMATISCHE TYPISIERUNG (var):");
+  print("Automatische Typen (var):");
   var alterVar = 32;
   var groesseVar = 1.75;
   var istStudentVar = true;
@@ -160,9 +169,24 @@ void main() {
   print("Ist Student: " + istStudentVar.toString() + " (Typ: " + istStudentVar.runtimeType.toString() + ")");
   print("Name: " + nameVar + " (Typ: " + nameVar.runtimeType.toString() + ")");
 
-  // Dynamische Typisierung (dynamic)
+  // ========================================
+  // 9. VAR VS. DYNAMIC - DER UNTERSCHIED
+  // ========================================
   print("");
-  print("DYNAMISCHE TYPISIERUNG (dynamic):");
+  print("9. VAR VS. DYNAMIC - DER UNTERSCHIED:");
+  print("---------------------------------------");
+
+  // var: Typ wird automatisch erkannt und ist dann fest
+  print("VAR - Typ wird automatisch erkannt und ist dann fest:");
+  var zahlVar = 42;
+  print("zahlVar: " + zahlVar.toString() + " (Typ: " + zahlVar.runtimeType.toString() + ")");
+
+  // Das geht NICHT: zahlVar = "Jetzt bin ich ein String"; // Fehler!
+  print("Der Typ kann NICHT geändert werden!");
+
+  // dynamic: Typ kann zur Laufzeit geändert werden
+  print("");
+  print("DYNAMIC - Typ kann zur Laufzeit geändert werden:");
   dynamic variable = 42;
   print("Variable: " + variable.toString() + " (Typ: " + variable.runtimeType.toString() + ")");
 
@@ -172,37 +196,52 @@ void main() {
   variable = true;
   print("Variable: " + variable.toString() + " (Typ: " + variable.runtimeType.toString() + ")");
 
+  variable = 3.14;
+  print("Variable: " + variable.toString() + " (Typ: " + variable.runtimeType.toString() + ")");
+
   // ========================================
-  // 6. PRAKTISCHE BEISPIELE
+  // 10. WANN VERWENDET MAN WAS?
   // ========================================
   print("");
-  print("6. PRAKTISCHE BEISPIELE:");
+  print("10. WANN VERWENDET MAN WAS?");
+  print("-----------------------------");
+
+  print("✅ EXPLIZITE TYPEN (int, double, bool, String):");
+  print("- Immer verwenden wenn möglich");
+  print("- Bessere Lesbarkeit und Fehlererkennung");
+  print("- Beispiel: int alter = 25;");
+
+  print("");
+  print("✅ VAR:");
+  print("- Wenn der Typ offensichtlich ist");
+  print("- Typ wird automatisch erkannt und ist dann fest");
+  print("- Beispiel: var name = \"Max\"; // wird zu String");
+
+  print("");
+  print("⚠️  DYNAMIC:");
+  print("- Nur in speziellen Fällen verwenden");
+  print("- Typ kann zur Laufzeit geändert werden");
+  print("- Weniger sicher, da Fehler erst zur Laufzeit erkannt werden");
+  print("- Beispiel: dynamic variable = 42;");
+
+  // ========================================
+  // 11. PRAKTISCHE BEISPIELE
+  // ========================================
+  print("");
+  print("11. PRAKTISCHE BEISPIELE:");
   print("---------------------------");
 
   // Benutzerprofil
-  String benutzername = "dart_meister";
-  int anzahlKurse = 5;
-  double durchschnittsnote = 4.8;
-  bool istPremium = true;
+  String benutzername = "dart_anfaenger";
+  int anzahlKurse = 3;
+  double durchschnittsnote = 4.5;
+  bool istPremium = false;
 
-  String profil =
-      """
-  📱 BENUTZERPROFIL
-  =================
-  Benutzername: @""" +
-      benutzername +
-      """
-  Kurse belegt: """ +
-      anzahlKurse.toString() +
-      """
-  Durchschnittsnote: """ +
-      durchschnittsnote.toString() +
-      """
-  Premium-Mitglied: """ +
-      (istPremium ? "✅ Ja" : "❌ Nein") +
-      """
-  """;
-  print(profil);
+  print("📱 BENUTZERPROFIL:");
+  print("Benutzername: @" + benutzername);
+  print("Kurse belegt: " + anzahlKurse.toString());
+  print("Durchschnittsnote: " + durchschnittsnote.toString());
+  print("Premium-Mitglied: " + (istPremium ? "✅ Ja" : "❌ Nein"));
 
   // Wetterbericht
   String ort = "München";
@@ -211,6 +250,8 @@ void main() {
   double temperaturTag = -2.5;
   bool schneit = true;
 
+  print("");
+  print("🌤️  WETTERBERICHT:");
   String wetterbericht =
       "Am " +
       tag.toString() +
@@ -222,16 +263,16 @@ void main() {
       temperaturTag.toString() +
       "°C, " +
       (schneit ? "es schneit" : "kein Schnee");
-  print("");
-  print("🌤️  WETTERBERICHT:");
   print(wetterbericht);
 
   print("");
   print("🎯 ZUSAMMENFASSUNG:");
-  print("- int: Ganze Zahlen");
-  print("- double: Dezimalzahlen");
-  print("- bool: Wahrheitswerte (true/false)");
-  print("- String: Text");
+  print("- int: Ganze Zahlen (Alter, Jahre, Anzahl)");
+  print("- double: Dezimalzahlen (Größe, Gewicht, Preise)");
+  print("- bool: Wahrheitswerte (Ja/Nein, Zustände)");
+  print("- String: Text (Namen, Nachrichten, Beschreibungen)");
+  print("- var: Typ wird automatisch erkannt und ist dann fest");
+  print("- dynamic: Typ kann zur Laufzeit geändert werden");
   print("- Verwende explizite Typen für bessere Lesbarkeit");
   print("- String-Verkettung mit + funktioniert gut");
 }
